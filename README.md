@@ -9,7 +9,7 @@
 
 A curated collection of papers, blog posts, benchmarks, and tools on **inferring, generating, and using specifications for software with large language models** — postconditions, contracts, loop invariants, test oracles, temporal-logic properties, and the verification pipelines built on top of them.
 
-**333 papers** · **12 blog posts and talks** · **56 tools** · organised by what a specification is *for*, not by which model wrote it.
+**335 papers** · **11 blog posts and talks** · **56 tools** · organised by what a specification is *for*, not by which model wrote it.
 
 > **Scope:** specifications *for software*. Purely mathematical autoformalization, hardware/RTL assertion generation, and fuzzing without a specification component are out of scope. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full rules.
 
@@ -20,10 +20,10 @@ A curated collection of papers, blog posts, benchmarks, and tools on **inferring
 ## 📑 Contents
 
 - **[🧭 Start Here](#-start-here)**
-  - [Surveys & Position Papers](#surveys--position-papers) `7`
-  - [Blog Posts, Talks & Essays](#blog-posts-talks--essays) `12`
+  - [Surveys & Position Papers](#surveys--position-papers) `9`
+  - [Blog Posts, Talks & Essays](#blog-posts-talks--essays) `11`
 - **[🔍 Where Specifications Come From](#-where-specifications-come-from)**
-  - [Specification Inference & Generation](#specification-inference--generation) `53`
+  - [Specification Inference & Generation](#specification-inference--generation) `52`
   - [Contracts, Pre- & Postconditions](#contracts-pre---postconditions) `41`
   - [Loop & Program Invariants](#loop--program-invariants) `14`
   - [API, Protocol & System Specifications](#api-protocol--system-specifications) `13`
@@ -32,7 +32,7 @@ A curated collection of papers, blog posts, benchmarks, and tools on **inferring
   - [Verification & Proof Synthesis](#verification--proof-synthesis) `88`
   - [Tests & Oracles as Specifications](#tests--oracles-as-specifications) `34`
 - **[📊 Measuring Progress](#-measuring-progress)**
-  - [Benchmarks, Datasets & Empirical Studies](#benchmarks-datasets--empirical-studies) `37`
+  - [Benchmarks, Datasets & Empirical Studies](#benchmarks-datasets--empirical-studies) `38`
 - **[🧰 Tools & Frameworks](#-tools--frameworks)**
   - [LLM-Based Tools](#llm-based-tools) `20`
   - [Traditional Specification & Verification Tools](#traditional-specification--verification-tools) `36`
@@ -62,6 +62,11 @@ Overviews of the field and arguments about where specifications fit in an LLM wo
   - Date: 2026-05
   - Venue: -
   - Code: -
+- [Intent Formalization: A Grand Challenge for Reliable Coding in the Age of AI Agents](https://arxiv.org/abs/2603.17150)
+  - Author(s): Shuvendu K. Lahiri
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
 - [LLM For Loop Invariant Generation and Fixing: How Far Are We?](https://arxiv.org/abs/2511.06552)
   - Author(s): Mostafijur Rahman Akhond, Saikat Chakraborty, Gias Uddin
   - Date: 2025-11
@@ -77,6 +82,11 @@ Overviews of the field and arguments about where specifications fit in an LLM wo
   - Date: 2025-06
   - Venue: -
   - Code: -
+- [Seeking Specifications: The Case for Neuro-Symbolic Specification Synthesis](https://arxiv.org/abs/2504.21061)
+  - Author(s): George Granberry, Wolfgang Ahrendt, Moa Johansson
+  - Date: 2025-04
+  - Venue: Formal Aspects Comput.
+  - Code: -
 - [The Fusion of Large Language Models and Formal Methods for Trustworthy AI Agents: A Roadmap](https://arxiv.org/abs/2412.06512)
   - Author(s): Yedi Zhang, Yufan Cai, Xinyue Zuo, Xiaokun Luan, Kailong Wang, Zhe Hou, Yifan Zhang, Zhiyuan Wei, Meng Sun, Jun Sun, Jing Sun, Jin Song Dong
   - Date: 2024-12
@@ -87,10 +97,6 @@ Overviews of the field and arguments about where specifications fit in an LLM wo
 
 A short, hand-picked reading list of non-archival writing, essential first.
 
-- [Intent Formalization: A Grand Challenge for Reliable Coding in the Age of AI Agents](https://risemsr.github.io/blog/2026-03-05-shuvendu-intent-formalization/)
-  - Author(s): Shuvendu K. Lahiri, Microsoft Research RiSE
-  - Date: 2026-03
-  - Argues that turning informal intent into checkable specifications is the real bottleneck for AI coding.
 - [The New Code](https://ai.engineer/talks/8rABwKRsec4-specifications-are-the-new-code)
   - Author(s): Sean Grove, OpenAI (AI Engineer World's Fair)
   - Date: 2025-06
@@ -330,11 +336,6 @@ Inferring or generating specifications (formal or semi-formal) for existing or g
   - Author(s): He Ye, Aidan Z. H. Yang, Chang Hu, Yanlin Wang, Tao Zhang, Claire Le Goues
   - Date: 2025-05
   - Venue: -
-  - Code: -
-- [Seeking Specifications: The Case for Neuro-Symbolic Specification Synthesis](https://arxiv.org/abs/2504.21061)
-  - Author(s): George Granberry, Wolfgang Ahrendt, Moa Johansson
-  - Date: 2025-04
-  - Venue: Formal Aspects Comput.
   - Code: -
 - [Intention is All You Need: Refining Your Code from Your Intention](https://arxiv.org/abs/2502.08172)
   - Author(s): Qi Guo, Xiaofei Xie, Shangqing Liu, Ming Hu, Xiaohong Li, Lei Bu
@@ -1648,6 +1649,11 @@ Benchmarks and empirical evaluations of specification generation, verification, 
   - Date: 2026-08
   - Venue: -
   - Code: -
+- [Vero: Can AI Agents Build Formally Verified Software Repositories?](https://arxiv.org/abs/2608.13522)
+  - Author(s): Zhe Ye, Hantao Lou, Yuechun Sun, Peiyang Song, Zhengxu Yan, Timothe Kasriel, Qingyang Zhang, Kaiyu Yang, Soonho Kong, Jingxuan He, Dawn Song
+  - Date: 2026-08
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/sunblaze-ucb/vero)
 - [Vul4Py: Benchmarking Automated Vulnerability Repair in Python with Paired Exploit and Functional Oracles](https://arxiv.org/abs/2608.00692)
   - Author(s): Tan Bui, Ting Zhang, Ferdian Thung, Yunpeng Xiong, Penghao Jiang, Xin Zhou, David Lo
   - Date: 2026-08
