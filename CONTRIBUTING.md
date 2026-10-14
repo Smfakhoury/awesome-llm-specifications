@@ -31,7 +31,7 @@ Sections are grouped into parts by what the work is *for*:
 | 🔍 Where Specifications Come From | Inference and generation: specs, contracts, invariants, API/protocol models, and natural-language formalization |
 | ✅ What Specifications Are For | Verification and proof synthesis; tests and oracles |
 | 📊 Measuring Progress | Benchmarks, datasets, and empirical studies |
-| 🛠️ Tools & Frameworks | LLM-based tools, and the traditional tools they build on |
+| 🧰 Tools & Frameworks | LLM-based tools, and the traditional tools they build on |
 
 ## Adding a paper
 

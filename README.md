@@ -33,7 +33,7 @@ A curated collection of papers, blog posts, benchmarks, and tools on **inferring
   - [Tests & Oracles as Specifications](#tests--oracles-as-specifications) `34`
 - **[📊 Measuring Progress](#-measuring-progress)**
   - [Benchmarks, Datasets & Empirical Studies](#benchmarks-datasets--empirical-studies) `37`
-- **[🛠️ Tools & Frameworks](#-tools--frameworks)**
+- **[🧰 Tools & Frameworks](#-tools--frameworks)**
   - [LLM-Based Tools](#llm-based-tools) `20`
   - [Traditional Specification & Verification Tools](#traditional-specification--verification-tools) `36`
 - [🤝 Contributing](#-contributing)
@@ -1826,7 +1826,7 @@ Benchmarks and empirical evaluations of specification generation, verification, 
 
 <p align="right"><a href="#-contents">back to top &#8679;</a></p>
 
-## 🛠️ Tools & Frameworks
+## 🧰 Tools & Frameworks
 
 *What to actually run.*
 
