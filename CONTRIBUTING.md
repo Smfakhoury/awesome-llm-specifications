@@ -12,6 +12,7 @@ This list covers **specifications for software** in the era of large language mo
 - translating requirements and intent into formal artifacts (LTL/STL, TLA+, Alloy, state machines)
 - verification, proof synthesis, and repair pipelines that consume those specifications
 - benchmarks, datasets, empirical studies, surveys, and tooling for the above
+- blog posts, essays, and talks from research groups and practitioners on the same topics
 
 Out of scope:
 
@@ -19,6 +20,18 @@ Out of scope:
 - hardware/RTL assertion and specification generation
 - fuzzing, test-input generation, and vulnerability detection with no specification component
 - general code generation that does not produce or consume a specification
+
+## How the list is organized
+
+Sections are grouped into parts by what the work is *for*:
+
+| Part | Contains |
+| --- | --- |
+| 🧭 Start Here | Surveys, position papers, blog posts, and talks |
+| 🔍 Where Specifications Come From | Inference and generation: specs, contracts, invariants, API/protocol models, and natural-language formalization |
+| ✅ What Specifications Are For | Verification and proof synthesis; tests and oracles |
+| 📊 Measuring Progress | Benchmarks, datasets, and empirical studies |
+| 🛠️ Tools & Frameworks | LLM-based tools, and the traditional tools they build on |
 
 ## Adding a paper
 
@@ -48,6 +61,23 @@ A helper script generates a correct entry from an arXiv ID or URL:
 python3 scripts/fetch_entry.py 2310.01831
 python3 scripts/fetch_entry.py https://arxiv.org/abs/2310.01831
 ```
+
+## Adding a blog post or talk
+
+Blog posts, engineering-blog articles, essays, and recorded talks go in **Blog Posts, Talks & Essays**. They must be technical, from a credible source, and specifically about specifications, proofs, contracts, invariants, or oracles in connection with AI. Use this format:
+
+```markdown
+- [Post Title](https://example.com/post)
+  - Author(s): Author Name, Organization
+  - Date: 2025-04
+  - One sentence on why it is worth reading.
+```
+
+Link the canonical original URL, not a mirror or aggregator. Use `n/a` for the date only when the page genuinely shows none.
+
+## Adding a tool
+
+Tools go under **LLM-Based Tools** if a language model is part of how they work, and under **Traditional Specification & Verification Tools** otherwise. Traditional tools are included only when LLM work actually targets, extends, or benchmarks against them. One line per tool, describing what it does rather than how good it is.
 
 ## Other changes
 
