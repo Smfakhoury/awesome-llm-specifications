@@ -1,0 +1,1781 @@
+# 📜 Awesome LLM Specifications
+
+<p align="center">
+  <a href="https://awesome.re"><img src="https://img.shields.io/badge/Awesome-%F0%9F%93%9C_LLM_Specifications-000000?style=for-the-badge&labelColor=000000" alt="Awesome LLM Specifications"></a>
+  <a href="https://github.com/Smfakhoury/awesome-llm-specifications/stargazers"><img src="https://img.shields.io/github/stars/Smfakhoury/awesome-llm-specifications?style=for-the-badge&logo=github&logoColor=white&label=Stars&labelColor=000000&color=000000" alt="GitHub Stars"></a>
+  <a href="https://github.com/Smfakhoury/awesome-llm-specifications/network/members"><img src="https://img.shields.io/github/forks/Smfakhoury/awesome-llm-specifications?style=for-the-badge&logo=github&logoColor=white&label=Forks&labelColor=000000&color=000000" alt="GitHub Forks"></a>
+  <a href="https://github.com/Smfakhoury/awesome-llm-specifications/commits"><img src="https://img.shields.io/github/last-commit/Smfakhoury/awesome-llm-specifications?style=for-the-badge&logo=github&logoColor=white&label=Last%20Commit&labelColor=000000&color=000000" alt="Last Commit"></a>
+</p>
+
+A curated collection of papers, benchmarks, and tools on **inferring, generating, and using specifications for software with large language models** — postconditions, contracts, loop invariants, test oracles, temporal-logic properties, and the verification pipelines built on top of them.
+
+As of the last commit, there are **326** papers, **7** surveys and position papers, and **21** tools and frameworks.
+
+> Scope: specifications *for software*. Papers on purely mathematical autoformalization, hardware/RTL assertion generation, and fuzzing without a specification component are out of scope.
+
+> If your paper is missing, or you find a mistake, typo, or out-of-date entry, please open an issue or submit a pull request.
+
+## Contents
+
+- [Specification Inference & Generation](#specification-inference--generation) (53)
+- [Contracts, Pre- & Postconditions](#contracts-pre---postconditions) (41)
+- [Loop & Program Invariants](#loop--program-invariants) (14)
+- [Verification & Proof Synthesis](#verification--proof-synthesis) (88)
+- [Tests & Oracles as Specifications](#tests--oracles-as-specifications) (34)
+- [Natural Language to Formal Specifications](#natural-language-to-formal-specifications) (46)
+- [API, Protocol & System Specifications](#api-protocol--system-specifications) (13)
+- [Benchmarks, Datasets & Empirical Studies](#benchmarks-datasets--empirical-studies) (37)
+- [Surveys & Position Papers](#surveys--position-papers) (7)
+- [Tools and Frameworks](#tools-and-frameworks)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Specification Inference & Generation
+
+Inferring or generating specifications (formal or semi-formal) for existing or generated code.
+
+- [claimcheck: Measuring and Improving Specification Faithfulness](https://arxiv.org/abs/2610.17358)
+  - Author(s): Martin Amster, One An, Holly Baker, Fernanda Graciolli, Simon Henniger, Nada Amin
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Path2Spec: Path-Aware Specification Generation via Large Language Models](https://arxiv.org/abs/2609.33438)
+  - Author(s): Dan Huang, Zhensu Sun, Huihui Huang, Jinfeng Jiang, Xiaofei Xie, Yintong Huo, David Lo
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Can Code Specify a System Precisely Enough to Formally Verify It?](https://arxiv.org/abs/2607.05076)
+  - Author(s): Jean-Jacques Dubray
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/jdubray/SysMoBench-1)
+- [SpecFirst: Behavioral Specification Elicitation as a First-Class Step in Agent-Based Program Synthesis from Scratch](https://arxiv.org/abs/2607.27167)
+  - Author(s): Yihao Chen, Shi Chang, Feng Lin, Khaled Chawa, Boyuan Chen, Shaowei Wang, Ahmed E. Hassan
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Specification Grounding Drives Test Effectiveness for LLM Code](https://arxiv.org/abs/2607.06636)
+  - Author(s): Amin Haeri, Mahdi Ghelichi
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [BeSpec: Behavior-Level Specification Alignment for Code Generation](https://arxiv.org/abs/2607.02949)
+  - Author(s): Qinghua Xu, Guancheng Wang, Boxi Yu, Lionel Briand
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Round-Trip Mutation Testing: Translating Code to Natural Language Intent and back](https://arxiv.org/abs/2607.03223)
+  - Author(s): Asma Hamidi, Cedric Richter, Ahmed Khanfir, Mike Papadakis
+  - Date: 2026-07
+  - Venue: ICST
+  - Code: -
+- [DragonCrawl: A Generative, Intent-Based Framework for Scalable Mobile End-to-End Testing](https://arxiv.org/abs/2607.28750)
+  - Author(s): Sowjanya Puligadda, Mengdie Zhang, Ali Zamani, Dhruva Dixith Kurra, Eric Chen, Juan Marcano
+  - Date: 2026-07
+  - Venue: ASE
+  - Code: -
+- [Autoformalization of Agent Instructions into Policy-as-Code](https://arxiv.org/abs/2606.26649)
+  - Author(s): Adam Mondl, Matthew Maisel, John H. Brock
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Code-Augur: Agentic Vulnerability Detection via Specification Inference](https://arxiv.org/abs/2606.18619)
+  - Author(s): Zhengxiong Luo, Mehtab Zafar, Dylan Wolff, Abhik Roychoudhury
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [IntentTester: Intent-Driven Multi-agent Framework for Cross-Library Test Migration](https://arxiv.org/abs/2606.25588)
+  - Author(s): Yi Gao, Ziyuan Zhang, Xing Hu, Xiaohu Yang, Xin Xia
+  - Date: 2026-06
+  - Venue: FSE
+  - Code: -
+- [Inferring Code Correctness from Specification](https://arxiv.org/abs/2605.29822)
+  - Author(s): Tambon Florian, Papadakis Mike
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Specification-Based Code-Text-Code Reengineering for LLM-Mediated Software Evolution](https://arxiv.org/abs/2605.25232)
+  - Author(s): Oleg Grynets, Vasyl Lyashkevych, Arsen Dolichnyi, Roman Piznak, Taras Zelenyy, Volodymyr Morozov
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [LLM-Assisted Repository-Level Generation with Structured Spec-Driven Engineering](https://arxiv.org/abs/2605.02455)
+  - Author(s): Shuzhao Feng, Boqi Chen, Brett H Meyer, Gunter Mussbacher
+  - Date: 2026-05
+  - Venue: FSE
+  - Code: -
+- [Formalizing Mathematics at Scale](https://arxiv.org/abs/2605.29955)
+  - Author(s): Ahmad Rammal, Niket Patel, Fabian Gloeckle, Amaury Hayat, Julia Kempe, Remi Munos, Charles Arnal, Vivien Cabannes
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Improving Dynamic Specification Inference with LLM-Generated Counterexamples](https://arxiv.org/abs/2604.10761)
+  - Author(s): Agustín Balestra, Agustín Nolasco, Facundo Molina, Diego Garbervetsky, Renzo Degiovanni, Nazareno Aguirre
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [SpecPylot: Python Specification Generation using Large Language Models](https://arxiv.org/abs/2604.16560)
+  - Author(s): Ragib Shahariar Ayon, Shibbir Ahmed
+  - Date: 2026-04
+  - Venue: FSE
+  - Code: -
+- [AutoReSpec: A Framework for Generating Specification using Large Language Models](https://arxiv.org/abs/2604.03758)
+  - Author(s): Ragib Shahariar Ayon, Shibbir Ahmed
+  - Date: 2026-04
+  - Venue: ICSE
+  - Code: -
+- [Enhancing Program Repair with Specification Guidance and Intermediate Behavioral Signals](https://arxiv.org/abs/2604.11770)
+  - Author(s): Minh Le-Anh, Cuong Chi Le, Tien N. Nguyen
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [When Prompt Under-Specification Improves Code Correctness: An Exploratory Study of Prompt Wording and Structure Effects on LLM-Based Code Generation](https://arxiv.org/abs/2604.24712)
+  - Author(s): Amal AKLI, Mike PAPADAKIS, Maxime CORDY, Yves Le TRAON
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Automated Functional Testing for Malleable Mobile Application Driven from User Intent](https://arxiv.org/abs/2604.02079)
+  - Author(s): Yuying Wang, Kaifeng Huang, Hao Deng, Zhiyuan Sun, Jinxuan Zhou, Shengjie Zhao
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Neuro-Symbolic Generation and Validation of Memory-Aware Formal Function Specifications](https://arxiv.org/abs/2603.13414)
+  - Author(s): Liao Zhang, Tong Chen, Xiwei Wu, Qi Liu, Xiyu Zhai, Xinqi Wang, Qinxiang Cao
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Algorithm-Based Pipeline for Reliable and Intent-Preserving Code Translation with LLMs](https://arxiv.org/abs/2602.16106)
+  - Author(s): Shahriar Rumi Dipto, Saikat Mondal, Chanchal K. Roy
+  - Date: 2026-02
+  - Venue: ICPC
+  - Code: -
+- [Beyond Basic Specifications? A Systematic Study of Logical Constructs in LLM-based Specification Generation](https://arxiv.org/abs/2602.00715)
+  - Author(s): Zehan Chen, Long Zhang, Zhiwei Zhang, JingJing Zhang, Ruoyu Zhou, Yulong Shen, JianFeng Ma, Lin Yang
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Logic-Parametric Neuro-Symbolic NLI: Controlling Logical Formalisms for Verifiable LLM Reasoning](https://arxiv.org/abs/2601.05705)
+  - Author(s): Ali Farjami, Luca Redondi, Marco Valentino
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Multi-Agent Taint Specification Extraction for Vulnerability Detection](https://arxiv.org/abs/2601.10865)
+  - Author(s): Jonah Ghebremichael, Saastha Vasan, Saad Ullah, Greg Tystahl, David Adei, Christopher Kruegel, Giovanni Vigna, William Enck, Alexandros Kapravelos
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [DSL or Code? Evaluating the Quality of LLM-Generated Algebraic Specifications: A Case Study in Optimization at Kinaxis](https://arxiv.org/abs/2601.00469)
+  - Author(s): Negin Ayoughi, David Dewar, Shiva Nejati, Mehrdad Sabetzadeh
+  - Date: 2026-01
+  - Venue: ICSE
+  - Code: -
+- [A Tale of 1001 LoC: Potential Runtime Error-Guided Specification Synthesis for Verifying Large-Scale Programs](https://arxiv.org/abs/2512.24594)
+  - Author(s): Zhongyi Wang, Tengjie Lin, Mingshuai Chen, Haokun Li, Mingqi Yang, Xiao Yi, Shengchao Qin, Yixing Luo, Xiaofeng Li, Bin Gu, Liqiang Lu, Jianwei Yin
+  - Date: 2025-12
+  - Venue: PACMPL
+  - Code: -
+- [Synergizing Code Coverage and Gameplay Intent: Coverage-Aware Game Playtesting with LLM-Guided Reinforcement Learning](https://arxiv.org/abs/2512.12706)
+  - Author(s): Enhong Mu, Minami Yoda, Yan Zhang, Mingyue Zhang, Yutaka Matsuno, Jialong Li
+  - Date: 2025-12
+  - Venue: Entertainment Computing
+  - Code: -
+- [VulInstruct: Teaching LLMs Root-Cause Reasoning for Vulnerability Detection via Security Specifications](https://arxiv.org/abs/2511.04014)
+  - Author(s): Hao Zhu, Jia Li, Cuiyun Gao, Jiaru Qian, Yihong Dong, Huanyu Liu, Lecheng Wang, Ziliang Wang, Xiaolong Hu, Ge Li
+  - Date: 2025-11
+  - Venue: FSE
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/zhuhaopku/VulInstruct-temp)
+- [Formalizing the Safety, Security, and Functional Properties of Agentic AI Systems](https://arxiv.org/abs/2510.14133)
+  - Author(s): Edoardo Allegrini, Ananth Shreekumar, Z. Berkay Celik
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [Caruca: Effective and Efficient Specification Mining for Opaque Software Components](https://arxiv.org/abs/2510.14279)
+  - Author(s): Evangelos Lamprou, Seong-Heon Jung, Mayank Keoliya, Lukas Lazarek, Konstantinos Kallas, Michael Greenberg, Nikos Vasilakis
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [Optimizing Knowledge Utilization for Multi-Intent Comment Generation with Large Language Models](https://arxiv.org/abs/2510.25195)
+  - Author(s): Shuochuan Li, Zan Wang, Xiaoning Du, Zhuo Wu, Jiuqiao Yu, Junjie Chen
+  - Date: 2025-10
+  - Venue: TSE
+  - Code: -
+- [Enhancing LLM-based Specification Generation via Program Slicing and Logical Deletion](https://arxiv.org/abs/2509.09917)
+  - Author(s): Zehan Chen, Long Zhang, Zhiwei Zhang, JingJing Zhang, Ruoyu Zhou, Yulong Shen, JianFeng Ma, Lin Yang
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [From Law to Gherkin: A Human-Centred Quasi-Experiment on the Quality of LLM-Generated Behavioural Specifications from Food-Safety Regulations](https://arxiv.org/abs/2508.20744)
+  - Author(s): Shabnam Hassani, Mehrdad Sabetzadeh, Daniel Amyot
+  - Date: 2025-08
+  - Venue: Information and Software Technology
+  - Code: -
+- [Integrating Symbolic Execution with LLMs for Automated Generation of Program Specifications](https://arxiv.org/abs/2506.09550)
+  - Author(s): Fanpeng Yang, Xu Ma, Shuling Wang, Xiong Xu, Qinxiang Cao, Naijun Zhan, Xiaofeng Li, Bin Gu
+  - Date: 2025-06
+  - Venue: -
+  - Code: -
+- [Adversarial Reasoning for Repair Based on Inferred Program Intent](https://arxiv.org/abs/2505.13008)
+  - Author(s): He Ye, Aidan Z. H. Yang, Chang Hu, Yanlin Wang, Tao Zhang, Claire Le Goues
+  - Date: 2025-05
+  - Venue: -
+  - Code: -
+- [Seeking Specifications: The Case for Neuro-Symbolic Specification Synthesis](https://arxiv.org/abs/2504.21061)
+  - Author(s): George Granberry, Wolfgang Ahrendt, Moa Johansson
+  - Date: 2025-04
+  - Venue: Formal Aspects Comput.
+  - Code: -
+- [Intention is All You Need: Refining Your Code from Your Intention](https://arxiv.org/abs/2502.08172)
+  - Author(s): Qi Guo, Xiaofei Xie, Shangqing Liu, Ming Hu, Xiaohong Li, Lei Bu
+  - Date: 2025-02
+  - Venue: ICSE
+  - Code: -
+- [iServe: An Intent-based Serving System for LLMs](https://arxiv.org/abs/2501.13111)
+  - Author(s): Dimitrios Liakopoulos, Tianrui Hu, Prasoon Sinha, Neeraja J. Yadwadkar
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [INTA: Intent-Based Translation for Network Configuration with LLM Agents](https://arxiv.org/abs/2501.08760)
+  - Author(s): Yunze Wei, Xiaohui Xie, Tianshuo Hu, Yiwei Zuo, Xinyi Chen, Kaiwen Chi, Yong Cui
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [PATCH: Empowering Large Language Model with Programmer-Intent Guidance and Collaborative-Behavior Simulation for Automatic Bug Fixing](https://arxiv.org/abs/2501.16149)
+  - Author(s): Yuwei Zhang, Zhi Jin, Ying Xing, Ge Li, Fang Liu, Jiaxin Zhu, Wensheng Dou, Jun Wei
+  - Date: 2025-01
+  - Venue: TOSEM
+  - Code: -
+- [Planning Anything with Rigor: General-Purpose Zero-Shot Planning with LLM-based Formalized Programming](https://arxiv.org/abs/2410.12112)
+  - Author(s): Yilun Hao, Yang Zhang, Chuchu Fan
+  - Date: 2024-10
+  - Venue: -
+  - Code: -
+- [SpecEval: Evaluating Code Comprehension in Large Language Models via Program Specifications](https://arxiv.org/abs/2409.12866)
+  - Author(s): Lezhi Ma, Shangqing Liu, Lei Bu, Shangru Li, Yida Wang, Yang Liu
+  - Date: 2024-09
+  - Venue: -
+  - Code: -
+- [SpecRover: Code Intent Extraction via LLMs](https://arxiv.org/abs/2408.02232)
+  - Author(s): Haifeng Ruan, Yuntong Zhang, Abhik Roychoudhury
+  - Date: 2024-08
+  - Venue: ICSE
+  - Code: -
+- [CellularLint: A Systematic Approach to Identify Inconsistent Behavior in Cellular Network Specifications](https://arxiv.org/abs/2407.13742)
+  - Author(s): Mirza Masfiqur Rahman, Imtiaz Karim, Elisa Bertino
+  - Date: 2024-07
+  - Venue: USENIX Security
+  - Code: -
+- [Specify What? Enhancing Neural Specification Synthesis by Symbolic Methods](https://arxiv.org/abs/2406.15540)
+  - Author(s): George Granberry, Wolfgang Ahrendt, Moa Johansson
+  - Date: 2024-06
+  - Venue: FM
+  - Code: -
+- [Eliciting Problem Specifications via Large Language Models](https://arxiv.org/abs/2405.12147)
+  - Author(s): Robert E. Wray, James R. Kirk, John E. Laird
+  - Date: 2024-05
+  - Venue: -
+  - Code: -
+- [Grounding Data Science Code Generation with Input-Output Specifications](https://arxiv.org/abs/2402.08073)
+  - Author(s): Yeming Wen, Pengcheng Yin, Kensen Shi, Henryk Michalewski, Swarat Chaudhuri, Alex Polozov
+  - Date: 2024-02
+  - Venue: -
+  - Code: -
+- [SpecGen: Automated Generation of Formal Program Specifications via Large Language Models](https://arxiv.org/abs/2401.08807)
+  - Author(s): Lezhi Ma, Shangqing Liu, Yi Li, Xiaofei Xie, Lei Bu
+  - Date: 2024-01
+  - Venue: ICSE
+  - Code: -
+- [Automated Repair of Declarative Software Specifications in the Era of Large Language Models](https://arxiv.org/abs/2310.12425)
+  - Author(s): Md Rashedul Hasan, Jiawei Li, Iftekhar Ahmed, Hamid Bagheri
+  - Date: 2023-10
+  - Venue: -
+  - Code: -
+- [Fixing Large Language Models' Specification Misunderstanding for Better Code Generation](https://arxiv.org/abs/2309.16120)
+  - Author(s): Zhao Tian, Junjie Chen, Xiangyu Zhang
+  - Date: 2023-09
+  - Venue: -
+  - Code: -
+- [Path-Based Function Embedding and its Application to Specification Mining](https://arxiv.org/abs/1802.07779)
+  - Author(s): Daniel DeFreez, Aditya V. Thakur, Cindy Rubio-González
+  - Date: 2018-02
+  - Venue: -
+  - Code: -
+
+## Contracts, Pre- & Postconditions
+
+Function-level contracts: postconditions, preconditions, ACSL/JML annotations, Hoare-style reasoning.
+
+- [Executable but Unfaithful: Mock Object, Stub, and Assertion Generation by LLMs and Coding Agents](https://arxiv.org/abs/2610.14629)
+  - Author(s): Hao Ning, Jiahui Dong, Zhen Yang, Guanda Yan, Yichen Sun, Xuanyu Zhu, Zheng Shen, Yifei Pei, Jacky Keung, Jie M. Zhang
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Verification of PETSc with CIVL using LLM-generated ACSL contracts and deterministic driver generation](https://arxiv.org/abs/2609.31687)
+  - Author(s): Hansol Suh, Jan Hückelheim, Stephen Siegel
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [SLICE: Specification-Level Isolation of Contract Enforcement](https://arxiv.org/abs/2608.21483)
+  - Author(s): Soohan Lim, Hyundong Jin, Yo-Sub Han
+  - Date: 2026-08
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/suhanmen/SLICE)
+- [Agent-Based Test Assertion Generation via Diverse Perspective Aggregation](https://arxiv.org/abs/2608.05822)
+  - Author(s): Dong Wang, Qiaoyu Han, Lin Yang, Jianyi Zhou, Guangtai Liang, Junjie Chen
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [CAPRI: Contract-Aware Proof Repair for Isabelle](https://arxiv.org/abs/2608.13459)
+  - Author(s): Jim Woodcock, Gabriel Leite, Augusto Sampaio, Ran Wei
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Contract-Aware Rescue of a Drifted Isabelle Development: The Double-Tank Case Study](https://arxiv.org/abs/2608.18822)
+  - Author(s): Jim Woodcock, Gabriel Leite, Augusto Sampaio, Ran Wei
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Towards LLM-assisted High-Quality Property Generation for Solidity Smart Contracts](https://arxiv.org/abs/2607.23308)
+  - Author(s): Muhammad Wahid, Shahzaib Khan, Mashhood Ali, Muhammad Hassan, Muhammad Naiman Jalil, Affan Rauf
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Partial Contracts Suffice: Sound, LLM-Inferred Regression Verification](https://arxiv.org/abs/2607.10291)
+  - Author(s): Yiannis Charalambous, Rafael Menezes, Youcheng Sun, Lucas C. Cordeiro
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [AutoACSL: Synthesizing ACSL Specifications by Integrating LLMs with CPG-Based Static Analysis](https://arxiv.org/abs/2606.20969)
+  - Author(s): Han Zhou, Yu Luo, Dianxiang Xu
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [CNnotator: LLM-Guided Memory Safety Annotation Synthesis](https://arxiv.org/abs/2606.21822)
+  - Author(s): Twain Byrnes, Mike Dodds
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Neuroforger: certified violation witnesses for smart contracts verification via LLMs](https://arxiv.org/abs/2605.31389)
+  - Author(s): Massimo Bartoletti, Enrico Lipparini
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Agentic Separation Logic Specification Synthesis](https://arxiv.org/abs/2605.27531)
+  - Author(s): Tarun Suresh, David Korczynski, Julien Vanegue
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Assertain: Automated Security Assertion Generation Using Large Language Models](https://arxiv.org/abs/2604.01583)
+  - Author(s): Shams Tarek, Dipayan Saha, Khan Thamid Hasan, Sujan Kumar Saha, Mark Tehranipoor, Farimah Farahmandi
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [FM-Agent: Scaling Formal Methods to Large Systems via LLM-Based Hoare-Style Reasoning](https://arxiv.org/abs/2604.11556)
+  - Author(s): Haoran Ding, Zhaoguo Wang, Haibo Chen
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [VibeContract: The Missing Quality Assurance Piece in Vibe Coding](https://arxiv.org/abs/2603.15691)
+  - Author(s): Song Wang
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Evaluating LLM-Generated ACSL Annotations for Formal Verification](https://arxiv.org/abs/2602.13851)
+  - Author(s): Arshad Beg, Diarmuid O'Donoghue, Rosemary Monahan
+  - Date: 2026-02
+  - Venue: -
+  - Code: -
+- [SpecMind: Cognitively Inspired, Interactive Multi-Turn Framework for Postcondition Inference](https://arxiv.org/abs/2602.20610)
+  - Author(s): Cuong Chi Le, Minh V. T Pham, Tung Vu Duy, Cuong Duc Van, Huy N. Phan, Hoang N. Phan, Tien N. Nguyen
+  - Date: 2026-02
+  - Venue: ACL
+  - Code: -
+- [Learning-Infused Formal Reasoning: From Contract Synthesis to Artifact Reuse and Formal Semantics](https://arxiv.org/abs/2602.02881)
+  - Author(s): Arshad Beg, Diarmuid O'Donoghue, Rosemary Monahan
+  - Date: 2026-02
+  - Venue: -
+  - Code: -
+- [Automatic Generation of Formal Specification and Verification Annotations Using LLMs and Test Oracles](https://arxiv.org/abs/2601.12845)
+  - Author(s): João Pascoal Faria, Emanuel Trigo, Vinicius Honorato, Rui Abreu
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Beyond Postconditions: Can Large Language Models infer Formal Contracts for Automatic Software Verification?](https://arxiv.org/abs/2510.12702)
+  - Author(s): Cedric Richter, Heike Wehrheim
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [FLAMES: Fine-tuning LLMs to Synthesize Invariants for Smart Contract Security](https://arxiv.org/abs/2510.21401)
+  - Author(s): Mojtaba Eshghie, Gabriele Morello, Matteo Lauretano, Alexandre Bartel, Martin Monperrus
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [Inferring multiple helper Dafny assertions with LLMs](https://arxiv.org/abs/2511.00125)
+  - Author(s): Álvaro Silva, Alexandra Mendes, Ruben Martins
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [Automated Type Annotation in Python Using Large Language Models](https://arxiv.org/abs/2508.00422)
+  - Author(s): Varun Bharti, Shashwat Jha, Dhruv Kumar, Pankaj Jalote
+  - Date: 2025-08
+  - Venue: -
+  - Code: -
+- [Breaking the Myth: Can Small Models Infer Postconditions Too?](https://arxiv.org/abs/2507.10182)
+  - Author(s): Gehao Zhang, Zhenting Wang, Juan Zhai
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [Re:Form -- Reducing Human Annotations in Scalable Formal Software Verification with RL in LLMs: A Preliminary Study on Dafny](https://arxiv.org/abs/2507.16331)
+  - Author(s): Chuanhao Yan, Fengdi Che, Xuhan Huang, Xu Xu, Xin Li, Yizhi Li, Xingwei Qu, Jingzhe Shi, Chenghua Lin, Yaodong Yang, Binhang Yuan, Hang Zhao, Yu Qiao, Bowen Zhou, Jie Fu
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [LLMs and Fuzzing in Tandem: A New Approach to Automatically Generating Weakest Preconditions](https://arxiv.org/abs/2507.05272)
+  - Author(s): Daragh King, Vasileios Koutavas, Laura Kovacs
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [Formal Methods Meets Readability: Auto-Documenting JML Java Code](https://arxiv.org/abs/2506.09230)
+  - Author(s): Juan Carlos Recio Abad, Ruben Saborido, Francisco Chicano
+  - Date: 2025-06
+  - Venue: -
+  - Code: -
+- [LAMeD: LLM-generated Annotations for Memory Leak Detection](https://arxiv.org/abs/2505.02376)
+  - Author(s): Ekaterina Shemetova, Ilya Shenbin, Ivan Smirnov, Anton Alekseev, Alexey Rukhovich, Sergey Nikolenko, Vadim Lomshakov, Irina Piontkovskaya
+  - Date: 2025-05
+  - Venue: -
+  - Code: -
+- [HoarePrompt: Structural Reasoning About Program Correctness in Natural Language](https://arxiv.org/abs/2503.19599)
+  - Author(s): Dimitrios Stamatios Bouras, Yihan Dai, Tairan Wang, Yingfei Xiong, Sergey Mechtaev
+  - Date: 2025-03
+  - Venue: ICSE
+  - Code: -
+- [Improving Retrieval-Augmented Deep Assertion Generation via Joint Training](https://arxiv.org/abs/2502.10696)
+  - Author(s): Quanjun Zhang, Chunrong Fang, Yi Zheng, Ruixiang Qian, Shengcheng Yu, Yuan Zhao, Jianyi Zhou, Yun Yang, Tao Zheng, Zhenyu Chen
+  - Date: 2025-02
+  - Venue: TSE
+  - Code: -
+- [Improving Deep Assertion Generation via Fine-Tuning Retrieval-Augmented Pre-trained Language Models](https://arxiv.org/abs/2502.16071)
+  - Author(s): Quanjun Zhang, Chunrong Fang, Yi Zheng, Yaxin Zhang, Yuan Zhao, Rubing Huang, Jianyi Zhou, Yun Yang, Tao Zheng, Zhenyu Chen
+  - Date: 2025-02
+  - Venue: TOSEM
+  - Code: -
+- [AsserT5: Test Assertion Generation Using a Fine-Tuned Code Language Model](https://arxiv.org/abs/2502.02708)
+  - Author(s): Severin Primbs, Benedikt Fein, Gordon Fraser
+  - Date: 2025-02
+  - Venue: -
+  - Code: -
+- [SymGPT: Auditing Smart Contracts via Combining Symbolic Execution with Large Language Models](https://arxiv.org/abs/2502.07644)
+  - Author(s): Shihao Xia, Mengting He, Shuai Shao, Tingting Yu, Yiying Zhang, Nobuko Yoshida, Linhai Song
+  - Date: 2025-02
+  - Venue: PACMPL
+  - Code: -
+- [DeCon: Detecting Incorrect Assertions via Postconditions Generated by a Large Language Model](https://arxiv.org/abs/2501.02901)
+  - Author(s): Hao Yu, Tianyu Chen, Jiaming Huang, Zongyang Li, Dezhi Ran, Xinyu Wang, Ying Li, Assaf Marron, David Harel, Yuan Xie, Tao Xie
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [Accessible Smart Contracts Verification: Synthesizing Formal Models with Tamed LLMs](https://arxiv.org/abs/2501.12972)
+  - Author(s): Jan Corazza, Ivan Gavran, Gabriela Moreira, Daniel Neider
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [Towards the LLM-Based Generation of Formal Specifications from Natural-Language Contracts: Early Experiments with Symboleo](https://arxiv.org/abs/2411.15898)
+  - Author(s): Mounira Nihad Zitouni, Amal Ahmed Anda, Sahil Rajpal, Daniel Amyot, John Mylopoulos
+  - Date: 2024-11
+  - Venue: RE
+  - Code: -
+- [ASSERTIFY: Utilizing Large Language Models to Generate Assertions for Production Code](https://arxiv.org/abs/2411.16927)
+  - Author(s): Mohammad Jalili Torkamani, Abhinav Sharma, Nikita Mehrotra, Rahul Purandare
+  - Date: 2024-11
+  - Venue: -
+  - Code: -
+- [Beyond Code Generation: Assessing Code LLM Maturity with Postconditions](https://arxiv.org/abs/2407.14118)
+  - Author(s): Fusen He, Juan Zhai, Minxue Pan
+  - Date: 2024-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/MatureModel/PostcondGen)
+- [PropertyGPT: LLM-driven Formal Verification of Smart Contracts through Retrieval-Augmented Property Generation](https://arxiv.org/abs/2405.02580)
+  - Author(s): Ye Liu, Yue Xue, Daoyuan Wu, Yuqiang Sun, Yi Li, Miaolei Shi, Yang Liu
+  - Date: 2024-05
+  - Venue: NDSS
+  - Code: -
+- [Can Large Language Models Transform Natural Language Intent into Formal Method Postconditions?](https://arxiv.org/abs/2310.01831)
+  - Author(s): Madeline Endres, Sarah Fakhoury, Saikat Chakraborty, Shuvendu K. Lahiri
+  - Date: 2023-10
+  - Venue: FSE
+  - Code: -
+- [(Security) Assertions by Large Language Models](https://arxiv.org/abs/2306.14027)
+  - Author(s): Rahul Kande, Hammond Pearce, Benjamin Tan, Brendan Dolan-Gavitt, Shailja Thakur, Ramesh Karri, Jeyavijayan Rajendran
+  - Date: 2023-06
+  - Venue: TIFS
+  - Code: -
+
+## Loop & Program Invariants
+
+Inductive loop invariants, class invariants, and invariant synthesis for verification.
+
+- [LimICE: Integrating LLM into ICE Framework for Efficient Loop Invariant Inference](https://arxiv.org/abs/2607.27606)
+  - Author(s): Kai Fan, ShiWen Yu, GuangSheng Fan, HaoAng Chi, WanWei Liu, Ji Wang
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [InvWeaver: Deductive Feedback for Invariant Synthesis in Interacting-Loop Programs](https://arxiv.org/abs/2607.05478)
+  - Author(s): Guangyuan Wu, Weining Cao, Zehui Tan, Yuan Yao, Hengfeng Wei, Taolue Chen, Xiaoxing Ma
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [ConVer: Using Contracts and Loop Invariant Synthesis for Scalable Formal Software Verification](https://arxiv.org/abs/2605.27051)
+  - Author(s): Muhammad A. A. Pirzada, Weiqi Wang, Yiannis Charalambous, Konstantin Korovin, Lucas C. Cordeiro
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Synthesizing Inductive Invariants for Distributed Protocols via IC3 and Large Language Models](https://arxiv.org/abs/2605.24619)
+  - Author(s): Weining Cao, Guangyuan Wu, Yuan Yao, Hengfeng Wei, Taolue Chen, Xiaoxing Ma
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Guiding LLM-based Loop Invariant Synthesis via Feedback on Local Reasoning Errors](https://arxiv.org/abs/2605.17914)
+  - Author(s): Tianchi Li, Zhenyu Yan, Junhao Liu, Peng Di, Xin Zhang
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [A Neurosymbolic Approach to Loop Invariant Generation via Weakest Precondition Reasoning](https://arxiv.org/abs/2512.15816)
+  - Author(s): Daragh King, Vasileios Koutavas, Laura Kovacs
+  - Date: 2025-12
+  - Venue: -
+  - Code: -
+- [BALI: Branch-Aware Loop Invariant Inference with Large Language Models](https://arxiv.org/abs/2601.00882)
+  - Author(s): Mingxiu Wang, Jiawei Wang, Xiao Cheng
+  - Date: 2025-12
+  - Venue: -
+  - Code: -
+- [MINES: Explainable Anomaly Detection through Web API Invariant Inference](https://arxiv.org/abs/2512.06906)
+  - Author(s): Wenjie Zhang, Yun Lin, Chun Fung Amos Kwok, Xiwen Teoh, Xiaofei Xie, Frank Liauw, Hongyu Zhang, Jin Song Dong
+  - Date: 2025-12
+  - Venue: ICSE
+  - Code: -
+- [Quokka: Accelerating Program Verification with LLMs via Invariant Synthesis](https://arxiv.org/abs/2509.21629)
+  - Author(s): Anjiang Wei, Tianran Sun, Tarun Suresh, Haoze Wu, Ke Wang, Alex Aiken
+  - Date: 2025-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Anjiang-Wei/Quokka)
+- [Loop Invariant Generation: A Hybrid Framework of Reasoning optimised LLMs and SMT Solvers](https://arxiv.org/abs/2508.00419)
+  - Author(s): Varun Bharti, Shashwat Jha, Dhruv Kumar, Pankaj Jalote
+  - Date: 2025-08
+  - Venue: -
+  - Code: -
+- [ClassInvGen: Class Invariant Synthesis using Large Language Models](https://arxiv.org/abs/2502.18917)
+  - Author(s): Chuyue Sun, Viraj Agashe, Saikat Chakraborty, Jubi Taneja, Clark Barrett, David Dill, Xiaokang Qiu, Shuvendu K. Lahiri
+  - Date: 2025-02
+  - Venue: SAIV
+  - Code: -
+- [Enhancing Automated Loop Invariant Generation for Complex Programs with Large Language Models](https://arxiv.org/abs/2412.10483)
+  - Author(s): Ruibang Liu, Minyu Chen, Ling-I Wu, Jingyu Ke, Guoqiang Li
+  - Date: 2024-12
+  - Venue: SCP
+  - Code: -
+- [Finding Inductive Loop Invariants using Large Language Models](https://arxiv.org/abs/2311.07948)
+  - Author(s): Adharsh Kamath, Aditya Senthilnathan, Saikat Chakraborty, Pantazis Deligiannis, Shuvendu K. Lahiri, Akash Lal, Aseem Rastogi, Subhajit Roy, Rahul Sharma
+  - Date: 2023-11
+  - Venue: -
+  - Code: -
+- [Ranking LLM-Generated Loop Invariants for Program Verification](https://arxiv.org/abs/2310.09342)
+  - Author(s): Saikat Chakraborty, Shuvendu K. Lahiri, Sarah Fakhoury, Madanlal Musuvathi, Akash Lal, Aseem Rastogi, Aditya Senthilnathan, Rahul Sharma, Nikhil Swamy
+  - Date: 2023-10
+  - Venue: EMNLP
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/microsoft/NeuralInvariantRanker)
+
+## Verification & Proof Synthesis
+
+Using specifications to verify code: Dafny, Verus, F*, Coq/Rocq, Lean, Frama-C, model checkers, and proof automation.
+
+- [SpecAgent: Empowering Program Verification with Agentic Synthesis of Formal Program Specifications](https://arxiv.org/abs/2610.05132)
+  - Author(s): Lezhi Ma, Han Wang, Shangqing Liu, Jiawan Wang, Lei Bu
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Cost-Efficient Theorem Proving via Agent Orchestration in Program Verification](https://arxiv.org/abs/2610.09681)
+  - Author(s): Shuangjie Yao, Nikolaus Holzer, Mark Paul Santolucito, Baishakhi Ray, Suman Jana, Dongdong She
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Beyond Type-checking: Towards Holistic Evaluation of Formal Specification Generation](https://arxiv.org/abs/2610.10604)
+  - Author(s): Srijith Nair, Aditya Vempaty, Jia Liu, Ashish Jagmohan
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Self-Spec Verifiable Code Generation](https://arxiv.org/abs/2609.39568)
+  - Author(s): Jiaru Qian, Yihong Dong, Yongmin Li, Hao Zhu, Bin Gu, Ge Li
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Formal Model Construction Guided by Model-Based Proof Sketches](https://arxiv.org/abs/2609.29870)
+  - Author(s): Hongshu Wang, Xinyue Zuo, Yufan Cai, Neeraj Kumar Singh, Yamine Ait Ameur, Jin Song Dong
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [LLVM Translation Validation Automated with Large Language Models and Lean](https://arxiv.org/abs/2609.19583)
+  - Author(s): Chunhao Liao, Hongxu Xu, Xintong Zhou, Yizhou Zhang, Chengnian Sun
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [Fewer Assumptions by Design: A Reusable Skill for LLM-Assisted Verus Verification](https://arxiv.org/abs/2609.34886)
+  - Author(s): Andrada-Livia Antoneac, Dorel Lucanu, Dragoş Teodor Gavriluţ
+  - Date: 2026-09
+  - Venue: -
+  - Code: -
+- [P$^{3}$: Joint Program-and-Proof Planning for Verified Code Generation](https://arxiv.org/abs/2608.09277)
+  - Author(s): Zenan Li, Ziran Yang, Peiyang Song, Zhaoyu Li, Kaiyu Yang
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Can Open-Weight LLMs Produce Kernel-Verified Coq Proofs? A Pilot Study](https://arxiv.org/abs/2608.05420)
+  - Author(s): Ahmed Ryan, Md Erfan, Akond Ashfaque Ur Rahman, Md Rayhanur Rahman
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Can Formal Specifications Be Synthesized from Tests Alone?](https://arxiv.org/abs/2608.13240)
+  - Author(s): Tianhai Liu, Maximilian Müller, Tobias Hey, Vitus Lüntzel, Muhammad Minhas, Anne Koziolek, Bernhard Beckert
+  - Date: 2026-08
+  - Venue: ASE
+  - Code: -
+- [Schwarz: Solver-Aware Agentic Program Verification](https://arxiv.org/abs/2608.30803)
+  - Author(s): Jingyu Ke, Ling-I Wu, Guoqiang Li
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [KaPilot: LLM-Assisted Generation of Kani Specifications for Unsafe Rust Verification](https://arxiv.org/abs/2607.21957)
+  - Author(s): Minghua Wang, Yuxi Ling, Mingzhi Gao, Yuwei Liu, Lin Huang
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Harnessing Code Agents for Automatic Software Verification](https://arxiv.org/abs/2607.06341)
+  - Author(s): Shuangxiang Kan, Shuanglong Kan, Sebastian Ertel
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Teaching Code LLMs to Reason with Intermediate Formal Specifications](https://arxiv.org/abs/2607.04232)
+  - Author(s): Minh Le-Anh, Cuong Chi Le, Tien N. Nguyen
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Formal Disco: Scalable Open-Ended Generation of Formally Verified Programs](https://arxiv.org/abs/2607.04631)
+  - Author(s): Gabriel Poesia, Simon Henniger, Tzu-Han Hsu, Yilun Du, Nada Amin
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/metareflection/formal-disco)
+- [KBSpec: LLM-driven Formal Specification Generation with Evolving Domain Knowledge Base](https://arxiv.org/abs/2606.21339)
+  - Author(s): Wenhan Wang, Zeyu Sun
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Neuro-Symbolic Software Verification: Hyper-charging Local Language Models with Symbolic Reasoning at Scale](https://arxiv.org/abs/2606.16886)
+  - Author(s): Muhammad A. A. Pirzada, Julian Parsert, Weiqi Wang, Konstantin Korovin, Lucas C. Cordeiro
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [AxDafny: Agentic Verified Code Generation in Dafny](https://arxiv.org/abs/2606.32007)
+  - Author(s): Benjamin Breen, Austin Letson, Borja Requena Pozo, Leopoldo Sarra
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Planning to Hammer: Difficulty-Aware Decomposition for Automating Rocq Proofs](https://arxiv.org/abs/2606.17981)
+  - Author(s): Ning Zhang, Nongyu Di, Zenan Li, Yuan Yao, Xiaoxing Ma
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Automating Formal Verification with Reinforcement Learning and Recursive Inference](https://arxiv.org/abs/2605.30914)
+  - Author(s): Max Tan
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Automating Formal Verification with Agent-Guided Tree Search](https://arxiv.org/abs/2605.27485)
+  - Author(s): Leo Yao
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [VeriScale: Adversarial Test-Suite Scaling for Verifiable Code Generation](https://arxiv.org/abs/2605.22368)
+  - Author(s): Yifan Bai, Xiaoyang Liu, Zihao Mou, Guihong Wang, Jian Yu, Shuhan Xie, Yantao Li, Yangyu Zhang, Jingwei Liang, Tao Luo
+  - Date: 2026-05
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/XiaoyangLiu-sjtu/VeriScale)
+- [Verus-SpecGym: An Agentic Environment for Evaluating Specification Autoformalization](https://arxiv.org/abs/2605.26457)
+  - Author(s): Anmol Agarwal, Natalie Neamtu, Pranjal Aggarwal, Seungone Kim, Jannis Limperg, Cedric Flamant, Kanna Shimizu, Bryan Parno, Sean Welleck
+  - Date: 2026-05
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/formal-verif-is-cool/verus-spec-gym)
+- [Event-B Agent: Towards LLM Agent for Formal Model Synthesis and Repair](https://arxiv.org/abs/2605.17475)
+  - Author(s): Hongshu Wang, Xinyue Zuo, Yuhan Sun, Qin Li, Yamine Ait Ameur, Jin Song Dong
+  - Date: 2026-05
+  - Venue: FSE
+  - Code: -
+- [AutoSOUP: Safety-Oriented Unit Proof Generation for Component-level Memory-Safety Verification](https://arxiv.org/abs/2605.10712)
+  - Author(s): Paschal C. Amusuo, Ricardo Calvo, Dharun Anandayuvaraj, Taylor Le Lievre, Kevin Kolyakov, Elijah Jorgensen, Aravind Machiry, James C. Davis
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Trustworthy Software Project Generation : a Case Study with an Interactive Theorem Prover](https://arxiv.org/abs/2605.26017)
+  - Author(s): Jian Fang, Yingfei Xiong
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Inductive Deductive Synthesis: Enabling AI to Generate Formally Verified Systems](https://arxiv.org/abs/2605.23109)
+  - Author(s): Shubham Agarwal, Alexander Krentsel, Shu Liu, Mert Cemri, Audrey Cheng, Rui Meng, Tomas Pfister, Chun-Liang Li, Sylvia Ratnasamy, Aditya Parameswaran, Matei Zaharia, Ion Stoica, Mohsen Lesani
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [SpecSyn: LLM-based Synthesis and Refinement of Formal Specifications for Real-world Program Verification](https://arxiv.org/abs/2604.21570)
+  - Author(s): Lezhi Ma, Shangqing Liu, Yi Li, Qiong Wu, Han Wang, Jiawan Wang, Lei Bu
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [From Natural Language to Verified Code: Toward AI Assisted Problem-to-Code Generation with Dafny-Based Formal Verification](https://arxiv.org/abs/2604.22601)
+  - Author(s): Md Erfan, Md Kamal Hossain Chowdhury, Ahmed Ryan, Md Rayhanur Rahman
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Intent-aligned Formal Specification Synthesis via Traceable Refinement](https://arxiv.org/abs/2604.10392)
+  - Author(s): Zhe Ye, Aidan Z. H. Yang, Huangyuan Su, Zhenyu Liao, Samuel Tenka, Zhizhen Qin, Udaya Ghai, Dawn Song, Soonho Kong
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [PROMISE: Proof Automation as Structural Imitation of Human Reasoning](https://arxiv.org/abs/2604.05399)
+  - Author(s): Youngjoo Ahn, Sangyeop Yeo, Gijung Im, Jongmin Lee, Jinyoung Yeo, Jieung Kim
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Broken by Default: A Formal Verification Study of Security Vulnerabilities in AI-Generated Code](https://arxiv.org/abs/2604.05292)
+  - Author(s): Dominik Blain, Maxime Noiseux
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Spec-Harness: Assessing and Guiding LLM-Synthesized Formal Specifications Beyond Verifiability](https://arxiv.org/abs/2604.00280)
+  - Author(s): Md Rakib Hossain Misu, Cristina V. Lopes, Iris Ma, Yuangang Li, Shuvendu Lahiri
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Automated Lemma Discovery in Agentic Program Verification](https://arxiv.org/abs/2603.22114)
+  - Author(s): Huan Zhao, Haoxin Tu, Zhengyao Liu, Martin C. Rinard, Abhik Roychoudhury
+  - Date: 2026-03
+  - Venue: ASE
+  - Code: -
+- [Neuro-Symbolic Proof Generation for Scaling Systems Software Verification](https://arxiv.org/abs/2603.19715)
+  - Author(s): Baoding He, Zenan Li, Wei Sun, Yuan Yao, Taolue Chen, Xiaoxing Ma, Zhendong Su
+  - Date: 2026-03
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/SoaringE/seL4-proof-search)
+- [ExVerus: Verus Proof Repair via Counterexample Reasoning](https://arxiv.org/abs/2603.25810)
+  - Author(s): Jun Yang, Yuechun Sun, Yi Wu, Rodrigo Caridad, Yongwei Yuan, Jianan Yao, Shan Lu, Kexin Pei
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Reducing the Costs of Proof Synthesis on Rust Systems by Scaling Up a Seed Training Set](https://arxiv.org/abs/2602.04910)
+  - Author(s): Nongyu Di, Tianyu Chen, Shan Lu, Shuai Lu, Yeyun Gong, Peng Cheng, Jacob R. Lorch, Yuan Yao, Xiaoxing Ma
+  - Date: 2026-02
+  - Venue: -
+  - Code: -
+- [Towards Real-World Industrial-Scale Verification: LLM-Driven Theorem Proving on seL4](https://arxiv.org/abs/2602.08384)
+  - Author(s): Jianyu Zhang, Fuyuan Zhang, Jiayi Lu, Jilin Hu, Xiaoyi Yin, Long Zhang, Feng Yang, Yongwang Zhao
+  - Date: 2026-02
+  - Venue: -
+  - Code: -
+- [DafnyPro: LLM-Assisted Automated Verification for Dafny Programs](https://arxiv.org/abs/2601.05385)
+  - Author(s): Debangshu Banerjee, Olivier Bouissou, Stefan Zetzsche
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [ATLAS: Automated Toolkit for Large-Scale Verified Code Synthesis](https://arxiv.org/abs/2512.10173)
+  - Author(s): Mantas Baksys, Stefan Zetzsche, Olivier Bouissou, Remi Delmas, Soonho Kong, Sean B. Holden
+  - Date: 2025-12
+  - Venue: -
+  - Code: -
+- [ProofWright: Towards Agentic Formal Verification of CUDA](https://arxiv.org/abs/2511.12294)
+  - Author(s): Bodhisatwa Chatterjee, Drew Zagieboylo, Sana Damani, Siva Hari, Christos Kozyrakis
+  - Date: 2025-11
+  - Venue: -
+  - Code: -
+- [VeriGuard: Enhancing LLM Agent Safety via Verified Code Generation](https://arxiv.org/abs/2510.05156)
+  - Author(s): Lesly Miculicich, Mihir Parmar, Hamid Palangi, Krishnamurthy Dj Dvijotham, Mirko Montanari, Tomas Pfister, Long T. Le
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [LLMs Lean on Priors, Not Programming Language Semantics](https://arxiv.org/abs/2510.03415)
+  - Author(s): Aditya Thimmaiah, Jiyang Zhang, Jayanth Srinivasa, Junyi Jessy Li, Milos Gligoric
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [VeriStruct: AI-assisted Automated Verification of Data-Structure Modules in Verus](https://arxiv.org/abs/2510.25015)
+  - Author(s): Chuyue Sun, Yican Sun, Daneshvar Amrollahi, Ethan Zhang, Shuvendu Lahiri, Shan Lu, David Dill, Clark Barrett
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [UnitTenX: Generating Tests for Legacy Packages with AI Agents Powered by Formal Verification](https://arxiv.org/abs/2510.05441)
+  - Author(s): Yiannis Charalambous, Claudionor N. Coelho, Luis Lamb, Lucas C. Cordeiro
+  - Date: 2025-10
+  - Venue: GeCoIn@ECAI
+  - Code: -
+- [What You Code Is What We Prove: Translating BLE App Logic into Formal Models with LLMs for Vulnerability Detection](https://arxiv.org/abs/2509.09291)
+  - Author(s): Biwei Yan, Yue Zhang, Minghui Xu, Runyu Pan, Jinku Li, Xiuzhen Cheng
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [FVDebug: An LLM-Driven Debugging Assistant for Automated Root Cause Analysis of Formal Verification Failures](https://arxiv.org/abs/2510.15906)
+  - Author(s): Yunsheng Bai, Ghaith Bany Hamad, Chia-Tung Ho, Syed Suhaib, Haoxing Ren
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [Towards Verified Code Reasoning by LLMs](https://arxiv.org/abs/2509.26546)
+  - Author(s): Meghana Sistla, Gogul Balakrishnan, Pat Rondon, José Cambronero, Michele Tufano, Satish Chandra
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [What's in a Proof? Analyzing Expert Proof-Writing Processes in F* and Verus](https://arxiv.org/abs/2508.02733)
+  - Author(s): Rijul Jain, Shraddha Barke, Gabriel Ebner, Md Rakib Hossain Misu, Shan Lu, Sarah Fakhoury
+  - Date: 2025-08
+  - Venue: -
+  - Code: -
+- [Towards Repository-Level Program Verification with Large Language Models](https://arxiv.org/abs/2509.25197)
+  - Author(s): Si Cheng Zhong, Xujie Si
+  - Date: 2025-08
+  - Venue: -
+  - Code: -
+- [Specification-Guided Repair of Arithmetic Errors in Dafny Programs using LLMs](https://arxiv.org/abs/2507.03659)
+  - Author(s): Valentina Wu, Alexandra Mendes, Alexandre Abreu
+  - Date: 2025-07
+  - Venue: ICSE
+  - Code: -
+- [Clarifying Before Reasoning: A Coq Prover with Structural Context](https://arxiv.org/abs/2507.02541)
+  - Author(s): Yanzhen Lu, Hanbin Yang, Xiaodie Wang, Ge Zhang, Biao Li, Chenxu Fu, Chao Li, Yang Yuan, Andrew Chi-Chih Yao
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [Supporting Software Formal Verification with Large Language Models: An Experimental Study](https://arxiv.org/abs/2507.04857)
+  - Author(s): Weiqi Wang, Marie Farrell, Lucas C. Cordeiro, Liping Zhao
+  - Date: 2025-07
+  - Venue: RE
+  - Code: -
+- [Can Large Language Models Help Students Prove Software Correctness? An Experimental Study with Dafny](https://arxiv.org/abs/2506.22370)
+  - Author(s): Carolina Carreira, Álvaro Silva, Alexandre Abreu, Alexandra Mendes
+  - Date: 2025-06
+  - Venue: ICSE
+  - Code: -
+- [Extracting Formal Specifications from Documents Using LLMs for Automated Testing](https://arxiv.org/abs/2504.01294)
+  - Author(s): Hui Li, Zhen Dong, Siao Wang, Hui Zhang, Liwei Shen, Xin Peng, Dongdong She
+  - Date: 2025-04
+  - Venue: -
+  - Code: -
+- [Towards Automated Formal Verification of Backend Systems with LLMs](https://arxiv.org/abs/2506.10998)
+  - Author(s): Kangping Xu, Yifan Luo, Yang Yuan, Andrew Chi-Chih Yao
+  - Date: 2025-04
+  - Venue: -
+  - Code: -
+- [Understanding Formal Reasoning Failures in LLMs as Abstract Interpreters](https://arxiv.org/abs/2503.12686)
+  - Author(s): Jacqueline L. Mitchell, Brian Hyeongseok Kim, Chenyu Zhou, Chao Wang
+  - Date: 2025-03
+  - Venue: -
+  - Code: -
+- [Can LLMs Reason About Program Semantics? A Comprehensive Evaluation of LLMs on Formal Specification Inference](https://arxiv.org/abs/2503.04779)
+  - Author(s): Thanh Le-Cong, Bach Le, Toby Murray
+  - Date: 2025-02
+  - Venue: ACL
+  - Code: -
+- [Building A Proof-Oriented Programmer That Is 64% Better Than GPT-4o Under Data Scarcity](https://arxiv.org/abs/2502.11901)
+  - Author(s): Dylan Zhang, Justin Wang, Tianran Sun
+  - Date: 2025-02
+  - Venue: ACL
+  - Code: -
+- [Verifying LLM-Generated Code in the Context of Software Verification with Ada/SPARK](https://arxiv.org/abs/2502.07728)
+  - Author(s): Marcos Cramer, Lucian McIntyre
+  - Date: 2025-02
+  - Venue: -
+  - Code: -
+- [RAG-Verus: Repository-Level Program Verification with LLMs using Retrieval Augmented Generation](https://arxiv.org/abs/2502.05344)
+  - Author(s): Sicheng Zhong, Jiading Zhu, Yifang Tian, Xujie Si
+  - Date: 2025-02
+  - Venue: -
+  - Code: -
+- [Dafny as Verification-Aware Intermediate Language for Code Generation](https://arxiv.org/abs/2501.06283)
+  - Author(s): Yue Chen Li, Stefan Zetzsche, Siva Somayyajula
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [Retrieval-Augmented TLAPS Proof Generation with Large Language Models](https://arxiv.org/abs/2501.03073)
+  - Author(s): Yuhao Zhou
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [AlphaVerus: Bootstrapping Formally Verified Code Generation through Self-Improving Translation and Treefinement](https://arxiv.org/abs/2412.06176)
+  - Author(s): Pranjal Aggarwal, Bryan Parno, Sean Welleck
+  - Date: 2024-12
+  - Venue: ICML
+  - Code: -
+- [Rango: Adaptive Retrieval-Augmented Proving for Automated Software Verification](https://arxiv.org/abs/2412.14063)
+  - Author(s): Kyle Thompson, Nuno Saavedra, Pedro Carrott, Kevin Fisher, Alex Sanchez-Stern, Yuriy Brun, João F. Ferreira, Sorin Lerner, Emily First
+  - Date: 2024-12
+  - Venue: ICSE
+  - Code: -
+- [Evaluating the Ability of Large Language Models to Generate Verifiable Specifications in VeriFast](https://arxiv.org/abs/2411.02318)
+  - Author(s): Wen Fan, Marilyn Rego, Xin Hu, Sanya Dod, Zhaorui Ni, Danning Xie, Jenna DiVincenzo, Lin Tan
+  - Date: 2024-11
+  - Venue: -
+  - Code: -
+- [VeCoGen: Automating Generation of Formally Verified C Code with Large Language Models](https://arxiv.org/abs/2411.19275)
+  - Author(s): Merlijn Sevenhuijsen, Khashayar Etemadi, Mattias Nyberg
+  - Date: 2024-11
+  - Venue: FM
+  - Code: -
+- [dafny-annotator: AI-Assisted Verification of Dafny Programs](https://arxiv.org/abs/2411.15143)
+  - Author(s): Gabriel Poesia, Chloe Loughridge, Nada Amin
+  - Date: 2024-11
+  - Venue: -
+  - Code: -
+- [Cobblestone: A Divide-and-Conquer Approach for Automating Formal Verification](https://arxiv.org/abs/2410.19940)
+  - Author(s): Saketh Ram Kasibatla, Arpan Agarwal, Yuriy Brun, Sorin Lerner, Talia Ringer, Emily First
+  - Date: 2024-10
+  - Venue: ICSE
+  - Code: -
+- [Automated Proof Generation for Rust Code via Self-Evolution](https://arxiv.org/abs/2410.15756)
+  - Author(s): Tianyu Chen, Shuai Lu, Shan Lu, Yeyun Gong, Chenyuan Yang, Xuheng Li, Md Rakib Hossain Misu, Hao Yu, Nan Duan, Peng Cheng, Fan Yang, Shuvendu K Lahiri, Tao Xie, Lidong Zhou
+  - Date: 2024-10
+  - Venue: ICLR
+  - Code: -
+- [Combining LLM Code Generation with Formal Specifications and Reactive Program Synthesis](https://arxiv.org/abs/2410.19736)
+  - Author(s): William Murphy, Nikolaus Holzer, Feitong Qiao, Leyi Cui, Raven Rothkopf, Nathan Koenig, Mark Santolucito
+  - Date: 2024-09
+  - Venue: -
+  - Code: -
+- [AutoVerus: Automated Proof Generation for Rust Code](https://arxiv.org/abs/2409.13082)
+  - Author(s): Chenyuan Yang, Xuheng Li, Md Rakib Hossain Misu, Jianan Yao, Weidong Cui, Yeyun Gong, Chris Hawblitzel, Shuvendu Lahiri, Jacob R. Lorch, Shuai Lu, Fan Yang, Ziqiao Zhou, Shan Lu
+  - Date: 2024-09
+  - Venue: PACMPL
+  - Code: -
+- [Proof Automation with Large Language Models](https://arxiv.org/abs/2409.14274)
+  - Author(s): Minghai Lu, Benjamin Delaware, Tianyi Zhang
+  - Date: 2024-09
+  - Venue: ASE
+  - Code: -
+- [Evaluating LLM-driven User-Intent Formalization for Verification-Aware Languages](https://arxiv.org/abs/2406.09757)
+  - Author(s): Shuvendu K. Lahiri
+  - Date: 2024-06
+  - Venue: FMCAD
+  - Code: -
+- [FVEL: Interactive Formal Verification Environment with Large Language Models via Theorem Proving](https://arxiv.org/abs/2406.14408)
+  - Author(s): Xiaohan Lin, Qingxing Cao, Yinya Huang, Haiming Wang, Jianqiao Lu, Zhengying Liu, Linqi Song, Xiaodan Liang
+  - Date: 2024-06
+  - Venue: NeurIPS
+  - Code: -
+- [Verified Code Transpilation with LLMs](https://arxiv.org/abs/2406.03003)
+  - Author(s): Sahil Bhatia, Jie Qiu, Niranjan Hasabnis, Sanjit A. Seshia, Alvin Cheung
+  - Date: 2024-06
+  - Venue: NeurIPS
+  - Code: -
+- [Towards Neural Synthesis for SMT-Assisted Proof-Oriented Programming](https://arxiv.org/abs/2405.01787)
+  - Author(s): Saikat Chakraborty, Gabriel Ebner, Siddharth Bhat, Sarah Fakhoury, Sakina Fatima, Shuvendu Lahiri, Nikhil Swamy
+  - Date: 2024-05
+  - Venue: ICSE
+  - Code: -
+- [Generative transformations and patterns in LLM-native approaches for software verification and falsification](https://arxiv.org/abs/2404.09384)
+  - Author(s): Víctor A. Braberman, Flavia Bonomo-Braberman, Yiannis Charalambous, Juan G. Colonna, Lucas C. Cordeiro, Rosiane de Freitas
+  - Date: 2024-04
+  - Venue: -
+  - Code: -
+- [Enchanting Program Specification Synthesis by Large Language Models using Static Analysis and Program Verification](https://arxiv.org/abs/2404.00762)
+  - Author(s): Cheng Wen, Jialun Cao, Jie Su, Zhiwu Xu, Shengchao Qin, Mengda He, Haokun Li, Shing-Chi Cheung, Cong Tian
+  - Date: 2024-03
+  - Venue: CAV
+  - Code: -
+- [Towards AI-Assisted Synthesis of Verified Dafny Methods](https://arxiv.org/abs/2402.00247)
+  - Author(s): Md Rakib Hossain Misu, Cristina V. Lopes, Iris Ma, James Noble
+  - Date: 2024-02
+  - Venue: FSE
+  - Code: -
+- [Leveraging Large Language Models to Boost Dafny's Developers Productivity](https://arxiv.org/abs/2401.00963)
+  - Author(s): Álvaro Silva, Alexandra Mendes, João F. Ferreira
+  - Date: 2024-01
+  - Venue: FM
+  - Code: -
+- [Selene: Pioneering Automated Proof in Software Verification](https://arxiv.org/abs/2401.07663)
+  - Author(s): Lichen Zhang, Shuai Lu, Nan Duan
+  - Date: 2024-01
+  - Venue: ACL
+  - Code: -
+- [Towards Auto-Modeling of Formal Verification for NextG Protocols: A Multimodal cross- and self-attention Large Language Model Approach](https://arxiv.org/abs/2312.17353)
+  - Author(s): Jingda Yang, Ying Wang
+  - Date: 2023-12
+  - Venue: IEEE Access
+  - Code: -
+- [Leveraging Large Language Models for Automated Proof Synthesis in Rust](https://arxiv.org/abs/2311.03739)
+  - Author(s): Jianan Yao, Ziqiao Zhou, Weiteng Chen, Weidong Cui
+  - Date: 2023-11
+  - Venue: -
+  - Code: -
+- [Can ChatGPT support software verification?](https://arxiv.org/abs/2311.02433)
+  - Author(s): Christian Janßen, Cedric Richter, Heike Wehrheim
+  - Date: 2023-11
+  - Venue: -
+  - Code: -
+- [Clover: Closed-Loop Verifiable Code Generation](https://arxiv.org/abs/2310.17807)
+  - Author(s): Chuyue Sun, Ying Sheng, Oded Padon, Clark Barrett
+  - Date: 2023-10
+  - Venue: SAIV
+  - Code: -
+- [Lemur: Integrating Large Language Models in Automated Program Verification](https://arxiv.org/abs/2310.04870)
+  - Author(s): Haoze Wu, Clark Barrett, Nina Narodytska
+  - Date: 2023-10
+  - Venue: ICLR
+  - Code: -
+- [Baldur: Whole-Proof Generation and Repair with Large Language Models](https://arxiv.org/abs/2303.04910)
+  - Author(s): Emily First, Markus N. Rabe, Talia Ringer, Yuriy Brun
+  - Date: 2023-03
+  - Venue: FSE
+  - Code: -
+
+## Tests & Oracles as Specifications
+
+Test oracles, assertions, property-based tests, and metamorphic relations as executable specifications.
+
+- [Escaping the Self-Repair Trap: Improving Test Oracle Generation via Dual-Context Awareness](https://arxiv.org/abs/2608.05917)
+  - Author(s): Kefan Li, Hongyue Yu, Yuan Yuan
+  - Date: 2026-08
+  - Venue: ASE
+  - Code: -
+- [Security Tests as Executable Specifications for LLM Code Generation: Benefits, Trade-offs, and Coverage Limits](https://arxiv.org/abs/2608.09740)
+  - Author(s): Yunhao Liang, Chengguang Gan, Ruixuan Ying, Hanjun Wei, Zhe Cui, Shiwen Ni
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Documentation vs. Code Patterns: What Drives LLM-Based Exception Oracle Generation?](https://arxiv.org/abs/2608.00884)
+  - Author(s): Soneya Binta Hossain, Matthew B. Dwyer, Tasfia Tasnim
+  - Date: 2026-08
+  - Venue: ASE
+  - Code: -
+- [RESTOR: Automated Test Oracle Generation for RESTful APIs via Reinforcement Learning](https://arxiv.org/abs/2607.23963)
+  - Author(s): Xun Zhou, Zhen Dong, Mingyu Ren, Qiang Li, JunJie Li, Sifan Wang, Xiaolong Yu, Chaofeng Sha, Xin Peng
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Repository-Aware Metamorphic Relation Generation for Augmented Reality Applications using Large Language Models](https://arxiv.org/abs/2607.28775)
+  - Author(s): Dibyendu Brinto Bose, Jiawei Qin, Chris Brown
+  - Date: 2026-07
+  - Venue: ASE
+  - Code: -
+- [Agentic Proof and Property-Based Testing via Property-Templates in Data-Intensive Computing](https://arxiv.org/abs/2607.09072)
+  - Author(s): Seongmin Lee, Yaoxuan Wu, Miryung Kim
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [CodeSpec: Dual Executable Specifications for Agentic Long-Horizon Feature Development](https://arxiv.org/abs/2607.26777)
+  - Author(s): Peiding Wang, Li Zhang, Fang Liu, Taichuan Li, Yinghao Zhu
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Fail-Aware and Explainable Test Oracle Prediction](https://arxiv.org/abs/2607.11342)
+  - Author(s): Yue Zhao, Binish Tanveer, Jelena Zdravkovic
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Investigating Metamorphic Fuzz Oracle Enhancement via Large Language Models](https://arxiv.org/abs/2606.14164)
+  - Author(s): Ruixiang Qian, Ding Yang, Zengxu Chen, Yuxuan Gao, Chunrong Fang, Chao Zhang, Zhenyu Chen
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [PropGen: Automated Property Generation for Property-Based Testing of Mobile Apps](https://arxiv.org/abs/2604.13463)
+  - Author(s): Yiheng Xiong, Shiwen Song, Bo Ma, Ting Su, Xiaofei Xie
+  - Date: 2026-04
+  - Venue: ASE
+  - Code: -
+- [Test-Driven AI Agent Definition (TDAD): Compiling Tool-Using Agents from Behavioral Specifications](https://arxiv.org/abs/2603.08806)
+  - Author(s): Tzafrir Rehan
+  - Date: 2026-03
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/f-labs-io/tdad-paper-code)
+- [Understanding LLM-Driven Test Oracle Generation](https://arxiv.org/abs/2601.05542)
+  - Author(s): Adam Bodicoat, Gunel Jahangirova, Valerio Terragni
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Watchdogs and Oracles: Runtime Verification Meets Large Language Models for Autonomous Systems](https://arxiv.org/abs/2511.14435)
+  - Author(s): Angelo Ferrando
+  - Date: 2025-11
+  - Venue: FMAS@iFM
+  - Code: -
+- [LLM Assisted Coding with Metamorphic Specification Mutation Agent](https://arxiv.org/abs/2511.18249)
+  - Author(s): Mostafijur Rahman Akhond, Gias Uddin
+  - Date: 2025-11
+  - Venue: -
+  - Code: -
+- [Automated Discovery of Test Oracles for Database Management Systems Using LLMs](https://arxiv.org/abs/2510.06663)
+  - Author(s): Qiuyang Mang, Runyuan He, Suyang Zhong, Xiaoxuan Liu, Huanchen Zhang, Alvin Cheung
+  - Date: 2025-10
+  - Venue: Proc. ACM Manag. Data
+  - Code: -
+- [Understanding the Characteristics of LLM-Generated Property-Based Tests in Exploring Edge Cases](https://arxiv.org/abs/2510.25297)
+  - Author(s): Hidetake Tanaka, Haruto Tanaka, Kazumasa Shimari, Kenichi Matsumoto
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [LLMs as verification oracles for Solidity](https://arxiv.org/abs/2509.19153)
+  - Author(s): Massimo Bartoletti, Enrico Lipparini, Livio Pompianu
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [SATORI: Static Test Oracle Generation for REST APIs](https://arxiv.org/abs/2508.16318)
+  - Author(s): Juan C. Alonso, Alberto Martin-Lopez, Sergio Segura, Gabriele Bavota, Antonio Ruiz-Cortés
+  - Date: 2025-08
+  - Venue: ASE
+  - Code: -
+- [RBCTest: Leveraging LLMs to Mine and Verify Oracles of API Response Bodies for RESTful API Testing](https://arxiv.org/abs/2504.17287)
+  - Author(s): Hieu Huynh, Tri Le, Tu Nguyen, Viet Nguyen, Vu Nguyen, Tien N. Nguyen
+  - Date: 2025-04
+  - Venue: ICSE
+  - Code: -
+- [AugmenTest: Enhancing Tests with LLM-Driven Oracles](https://arxiv.org/abs/2501.17461)
+  - Author(s): Shaker Mahmud Khandaker, Fitsum Kifetew, Davide Prandi, Angelo Susi
+  - Date: 2025-01
+  - Venue: -
+  - Code: -
+- [Doc2OracLL: Investigating the Impact of Documentation on LLM-based Test Oracle Generation](https://arxiv.org/abs/2412.09360)
+  - Author(s): Soneya Binta Hossain, Raygan Taylor, Matthew Dwyer
+  - Date: 2024-12
+  - Venue: FSE
+  - Code: -
+- [Can we find bugs using LLM-generated oracles?](https://arxiv.org/abs/2410.21136)
+  - Author(s): Michael Konstantinou, Renzo Degiovanni, Mike Papadakis
+  - Date: 2024-10
+  - Venue: -
+  - Code: -
+- [Test Oracle Automation in the era of LLMs](https://arxiv.org/abs/2405.12766)
+  - Author(s): Facundo Molina, Alessandra Gorla
+  - Date: 2024-05
+  - Venue: TOSEM
+  - Code: -
+- [TOGLL: Correct and Strong Test Oracle Generation with LLMs](https://arxiv.org/abs/2405.03786)
+  - Author(s): Soneya Binta Hossain, Matthew Dwyer
+  - Date: 2024-05
+  - Venue: ICSE
+  - Code: -
+- [Towards Generating Executable Metamorphic Relations Using Large Language Models](https://arxiv.org/abs/2401.17019)
+  - Author(s): Seung Yeob Shin, Fabrizio Pastore, Domenico Bianculli, Alexandra Baicoianu
+  - Date: 2024-01
+  - Venue: -
+  - Code: -
+- [Assessing Evaluation Metrics for Neural Test Oracle Generation](https://arxiv.org/abs/2310.07856)
+  - Author(s): Jiho Shin, Hadi Hemmati, Moshi Wei, Song Wang
+  - Date: 2023-10
+  - Venue: TSE
+  - Code: -
+- [Can Large Language Models Write Good Property-Based Tests?](https://arxiv.org/abs/2307.04346)
+  - Author(s): Vasudev Vikram, Caroline Lemieux, Joshua Sunshine, Rohan Padhye
+  - Date: 2023-07
+  - Venue: -
+  - Code: -
+- [Neural-Based Test Oracle Generation: A Large-scale Evaluation and Lessons Learned](https://arxiv.org/abs/2307.16023)
+  - Author(s): Soneya Binta Hossain, Antonio Filieri, Matthew B. Dwyer, Sebastian Elbaum, Willem Visser
+  - Date: 2023-07
+  - Venue: FSE
+  - Code: -
+- [ALGO: Synthesizing Algorithmic Programs with LLM-Generated Oracle Verifiers](https://arxiv.org/abs/2305.14591)
+  - Author(s): Kexun Zhang, Danqing Wang, Jingtao Xia, William Yang Wang, Lei Li
+  - Date: 2023-05
+  - Venue: NeurIPS
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/zkx06111/ALGO)
+- [Towards More Realistic Evaluation for Neural Test Oracle Generation](https://arxiv.org/abs/2305.17047)
+  - Author(s): Zhongxin Liu, Kui Liu, Xin Xia, Xiaohu Yang
+  - Date: 2023-05
+  - Venue: ISSTA
+  - Code: -
+- [Perfect is the enemy of test oracle](https://arxiv.org/abs/2302.01488)
+  - Author(s): Ali Reza Ibrahimzada, Yigit Varli, Dilara Tekinoglu, Reyhaneh Jabbarvand
+  - Date: 2023-02
+  - Venue: FSE
+  - Code: -
+- [Interactive Code Generation via Test-Driven User-Intent Formalization](https://arxiv.org/abs/2208.05950)
+  - Author(s): Shuvendu K. Lahiri, Sarah Fakhoury, Aaditya Naik, Georgios Sakkas, Saikat Chakraborty, Madanlal Musuvathi, Piali Choudhury, Curtis von Veh, Jeevana Priya Inala, Chenglong Wang, Jianfeng Gao
+  - Date: 2022-08
+  - Venue: -
+  - Code: -
+- [TOGA: A Neural Method for Test Oracle Generation](https://arxiv.org/abs/2109.09262)
+  - Author(s): Elizabeth Dinella, Gabriel Ryan, Todd Mytkowicz, Shuvendu K. Lahiri
+  - Date: 2021-09
+  - Venue: ICSE
+  - Code: -
+- [Generating Accurate Assert Statements for Unit Test Cases using Pretrained Transformers](https://arxiv.org/abs/2009.05634)
+  - Author(s): Michele Tufano, Dawn Drain, Alexey Svyatkovskiy, Neel Sundaresan
+  - Date: 2020-09
+  - Venue: -
+  - Code: -
+
+## Natural Language to Formal Specifications
+
+Requirements formalization, temporal logic (LTL/STL/TLA+), Alloy, state machines, and autoformalization of intent.
+
+- [Automatic Translation of Unstructured Requirements into Linear Temporal Logic through Large Language Models](https://arxiv.org/abs/2608.06287)
+  - Author(s): Alexandra Newcomb, Omar Ochoa
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Automated Testing of LLM-Based Post Hoc Explainers Using Model Checking as an Oracle](https://arxiv.org/abs/2608.30581)
+  - Author(s): Dennis Gross, Helge Spieker
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [The Specification Paradox: Rethinking Requirements Engineering in the Age of AI](https://arxiv.org/abs/2608.16618)
+  - Author(s): Tassio Sirqueira, Jessica Faciroli
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Specula: Scaling formal specifications for autonomous model checking of system code](https://arxiv.org/abs/2607.25333)
+  - Author(s): Qian Cheng, Saad Mohammad Rafid Pial, Ruize Tang, Yiming Su, Emilie Ma, Finn Hackett, Ivan Beschastnikh, Yu Huang, Tianyin Xu
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/specula-org/Specula)
+- [LM2Alloy: Investigating LLM-Generated Formal Specifications for Automated Test Derivation in Production Software](https://arxiv.org/abs/2607.18555)
+  - Author(s): Tasmim Rashid, Muhammad Zubair Malik
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [From Business Requirements to Test Assertions: Evaluating LLM-Generated Oracles on Real Bugs](https://arxiv.org/abs/2607.10277)
+  - Author(s): Tiancheng Ma, Nasir U. Eisty
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Faithful Autoformalization of Natural Language Assertions](https://arxiv.org/abs/2607.13303)
+  - Author(s): Hongyi Liu, Madhusudan Parthasarathy, Adithya Murali
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Cluster-Aware Dual-Level Test Specification Generation for Large-Scale Automotive Software Requirements](https://arxiv.org/abs/2606.17197)
+  - Author(s): Hazem Ayman, Menna Sedik, Kareem Mostafa, Mahmoud Soliman, Samer Saber, Ibrahim Habib
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Translating Natural Language to Strategic Temporal Specifications via LLMs](https://arxiv.org/abs/2606.30441)
+  - Author(s): Marco Aruta, Francesco Improta, Vadim Malvone, Aniello Murano, Vladana Perlić
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [TLA-Prover: Verifiable TLA+ Specification Synthesis via Preference-Optimized Low-Rank Adaptation](https://arxiv.org/abs/2606.06133)
+  - Author(s): Eric Spencer, Arslan Bisharat, Brian Ortiz, Khushboo Bhadauria, Mujtaba Nazari, TaiNing Wang, George K. Thiruvathukal, Konstantin Laufer, Mohammed Abuhamad
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [Can LLMs Write Correct TLA+ Specifications? Evaluating Natural-Language-to-TLA+ Generation](https://arxiv.org/abs/2606.05792)
+  - Author(s): Arslan Bisharat, Brian Ortiz, Eric Spencer, Khushboo Bhadauria, TaiNing Wang, George K. Thiruvathukal, Konstantin Laufer, Mohammed Abuhamad
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [ClarifySTL: An Interactive LLM Agent Framework for STL Transformation through Requirements Clarification](https://arxiv.org/abs/2605.01209)
+  - Author(s): Yue Fang, Zhi Jin, Jie An, Hongshen Chen, Xiaohong Chen, Naijun Zhan
+  - Date: 2026-05
+  - Venue: TOSEM
+  - Code: -
+- [Contract Based Verification of Non-functional Requirements for Embedded Automotive C Code](https://arxiv.org/abs/2605.21532)
+  - Author(s): Jesper Amilon, Merlijn Sevenhuijsen, Mattias Nyberg, Karl Palmskog
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [TraceFix: Repairing Agent Coordination Protocols with TLA+ Counterexamples](https://arxiv.org/abs/2605.07935)
+  - Author(s): Shuren Xia, Qiwei Li, Taqiya Ehsan, Jorge Ortiz
+  - Date: 2026-05
+  - Venue: CAIS
+  - Code: -
+- [Natural Language based Specification and Verification](https://arxiv.org/abs/2605.11315)
+  - Author(s): Zhaorui Li, Chengyu Song
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Automated LTL Specification Generation from Industrial Aerospace Requirements](https://arxiv.org/abs/2604.21715)
+  - Author(s): Zhi Ma, Xiao Liang, Cheng Wen, Rui Chen, Bin Gu, Shengchao Qin, Cong Tian, Mengfei Yang
+  - Date: 2026-04
+  - Venue: FM
+  - Code: -
+- [Syntax Is Easy, Semantics Is Hard: Evaluating LLMs for LTL Translation](https://arxiv.org/abs/2604.07321)
+  - Author(s): Priscilla Kyei Danso, Mohammad Saqib Hasan, Niranjan Balasubramanian, Omar Chowdhury
+  - Date: 2026-04
+  - Venue: IEEE Cybersecurity Development
+  - Code: -
+- [APITestGenie: Generating Web API Tests from Requirements and API Specifications with LLMs](https://arxiv.org/abs/2604.02039)
+  - Author(s): André Pereira, Bruno Lima, João Pascoal Faria
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Towards an Agentic LLM-based Approach to Requirement Formalization from Unstructured Specifications](https://arxiv.org/abs/2604.18228)
+  - Author(s): Alberto Tagliaferro, Bruno Guindani, Livia Lestingi, Matteo Rossi
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [Can ChatGPT Generate Realistic Synthetic System Requirement Specifications? Results of a Case Study](https://arxiv.org/abs/2603.09335)
+  - Author(s): Alex R. Mattukat, Florian M. Braun, Horst Lichter
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Designing FSMs Specifications from Requirements with GPT 4.0](https://arxiv.org/abs/2603.29140)
+  - Author(s): Omer Nguena Timo, Paul-Alexis Rodriguez, Florent Avellaneda
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [ModelWisdom: An Integrated Toolkit for TLA+ Model Visualization, Digest and Repair](https://arxiv.org/abs/2602.12058)
+  - Author(s): Zhiyong Chen, Jialun Cao, Chang Xu, Shing-Chi Cheung
+  - Date: 2026-02
+  - Venue: -
+  - Code: -
+- [RITA: A Tool for Automated Requirements Classification and Specification from Online User Feedback](https://arxiv.org/abs/2601.11362)
+  - Author(s): Manjeshwar Aniruddh Mallya, Alessio Ferrari, Mohammad Amin Zadenoori, Jacek Dąbrowski
+  - Date: 2026-01
+  - Venue: REFSQ
+  - Code: -
+- [Doc2Spec: Synthesizing Formal Programming Specifications from Natural Language via Grammar Induction](https://arxiv.org/abs/2602.04892)
+  - Author(s): Shihao Xia, Mengting He, Haomin Jia, Xinyan Zhao, Linhai Song
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Bridging Natural Language and Formal Specification--Automated Translation of Software Requirements to LTL via Hierarchical Semantics Decomposition Using LLMs](https://arxiv.org/abs/2512.17334)
+  - Author(s): Zhi Ma, Cheng Wen, Zhexin Su, Xiao Liang, Cong Tian, Shengchao Qin, Mengfei Yang
+  - Date: 2025-12
+  - Venue: ASE
+  - Code: -
+- [Towards Language Model Guided TLA+ Proof Automation](https://arxiv.org/abs/2512.09758)
+  - Author(s): Yuhao Zhou, Stavros Tripakis
+  - Date: 2025-12
+  - Venue: FM
+  - Code: -
+- [PAT-Agent: Autoformalization for Model Checking](https://arxiv.org/abs/2509.23675)
+  - Author(s): Xinyue Zuo, Yifan Zhang, Hongshu Wang, Yufan Cai, Zhe Hou, Jing Sun, Jin Song Dong
+  - Date: 2025-09
+  - Venue: ASE
+  - Code: -
+- [ReqInOne: A Large Language Model-Based Agent for Software Requirements Specification Generation](https://arxiv.org/abs/2508.09648)
+  - Author(s): Taohong Zhu, Lucas C. Cordeiro, Youcheng Sun
+  - Date: 2025-08
+  - Venue: RE
+  - Code: -
+- [Requirements Development and Formalization for Reliable Code Generation: A Multi-Agent Vision](https://arxiv.org/abs/2508.18675)
+  - Author(s): Xu Lu, Weisong Sun, Yiran Zhang, Ming Hu, Cong Tian, Zhi Jin, Yang Liu
+  - Date: 2025-08
+  - Venue: ASE
+  - Code: -
+- [PyVeritas: On Verifying Python via LLM-Based Transpilation and Bounded Model Checking for C](https://arxiv.org/abs/2508.08171)
+  - Author(s): Pedro Orvalho, Marta Kwiatkowska
+  - Date: 2025-08
+  - Venue: -
+  - Code: -
+- [Uncovering Systematic Failures of LLMs in Verifying Code Against Natural Language Specifications](https://arxiv.org/abs/2508.12358)
+  - Author(s): Haolin Jin, Huaming Chen
+  - Date: 2025-08
+  - Venue: ASE
+  - Code: -
+- [An Agentic Flow for Finite State Machine Extraction using Prompt Chaining](https://arxiv.org/abs/2507.11222)
+  - Author(s): Fares Wael, Youssef Maklad, Ali Hamdi, Wael Elsersy
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [Generating Project-Specific Test Cases with Requirement Validation Intention](https://arxiv.org/abs/2507.20619)
+  - Author(s): Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu, Hailong Sun, Zhi Jin, Jin Song Dong
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [Formalising Software Requirements using Large Language Models](https://arxiv.org/abs/2506.10704)
+  - Author(s): Arshad Beg, Diarmuid O'Donoghue, Rosemary Monahan
+  - Date: 2025-06
+  - Venue: -
+  - Code: -
+- [Enhancing Transformation from Natural Language to Signal Temporal Logic Using LLMs with Diverse External Knowledge](https://arxiv.org/abs/2505.20658)
+  - Author(s): Yue Fang, Zhi Jin, Jie An, Hongshen Chen, Xiaohong Chen, Naijun Zhan
+  - Date: 2025-05
+  - Venue: ACL
+  - Code: -
+- [LogiDebrief: A Signal-Temporal Logic based Automated Debriefing Approach with Large Language Models Integration](https://arxiv.org/abs/2505.03985)
+  - Author(s): Zirong Chen, Ziyan An, Jennifer Reynolds, Kristin Mullen, Stephen Martini, Meiyi Ma
+  - Date: 2025-05
+  - Venue: -
+  - Code: -
+- [ConformalNL2LTL: Translating Natural Language Instructions into Temporal Logic Formulas with Conformal Correctness Guarantees](https://arxiv.org/abs/2504.21022)
+  - Author(s): David Smith Sundarsingh, Jun Wang, Jyotirmoy V. Deshmukh, Yiannis Kantaros
+  - Date: 2025-04
+  - Venue: -
+  - Code: -
+- [Automatic Generation of Safety-compliant Linear Temporal Logic via Large Language Model: A Self-supervised Framework](https://arxiv.org/abs/2503.15840)
+  - Author(s): Junle Li, Siqi Chen, Jiakai Li, Meiqi Tian, Bingzhuo Zhong
+  - Date: 2025-03
+  - Venue: -
+  - Code: -
+- [On the Effectiveness of Large Language Models in Writing Alloy Formulas](https://arxiv.org/abs/2502.15441)
+  - Author(s): Yang Hong, Shan Jiang, Yulei Fu, Sarfraz Khurshid
+  - Date: 2025-02
+  - Venue: -
+  - Code: -
+- [Generating executable oracles to check conformance of client code to requirements of JDK Javadocs using LLMs](https://arxiv.org/abs/2411.01789)
+  - Author(s): Shan Jiang, Chenguang Zhu, Sarfraz Khurshid
+  - Date: 2024-11
+  - Venue: -
+  - Code: -
+- [VernaCopter: Disambiguated Natural-Language-Driven Robot via Formal Specifications](https://arxiv.org/abs/2409.09536)
+  - Author(s): Teun van de Laar, Zengjie Zhang, Shuhao Qi, Sofie Haesaert, Zhiyong Sun
+  - Date: 2024-09
+  - Venue: -
+  - Code: -
+- [Guiding LLM Temporal Logic Generation with Explicit Separation of Data and Control](https://arxiv.org/abs/2406.07400)
+  - Author(s): William Murphy, Nikolaus Holzer, Nathan Koenig, Leyi Cui, Raven Rothkopf, Feitong Qiao, Mark Santolucito
+  - Date: 2024-06
+  - Venue: -
+  - Code: -
+- [Unleashing the Power of LLM to Infer State Machine from the Protocol Implementation](https://arxiv.org/abs/2405.00393)
+  - Author(s): Haiyang Wei, Ligeng Chen, Zhengjie Du, Yuhan Wu, Haohui Huang, Yue Liu, Guang Cheng, Fengyuan Xu, Linzhang Wang, Bing Mao
+  - Date: 2024-05
+  - Venue: -
+  - Code: -
+- [Learning to Estimate System Specifications in Linear Temporal Logic using Transformers and Mamba](https://arxiv.org/abs/2405.20917)
+  - Author(s): İlker Işık, Ebru Aydin Gol, Ramazan Gokberk Cinbis
+  - Date: 2024-05
+  - Venue: -
+  - Code: -
+- [NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models](https://arxiv.org/abs/2305.07766)
+  - Author(s): Yongchao Chen, Rujul Gandhi, Yang Zhang, Chuchu Fan
+  - Date: 2023-05
+  - Venue: EMNLP
+  - Code: -
+- [nl2spec: Interactively Translating Unstructured Natural Language to Temporal Logics with Large Language Models](https://arxiv.org/abs/2303.04864)
+  - Author(s): Matthias Cosler, Christopher Hahn, Daniel Mendoza, Frederik Schmitt, Caroline Trippel
+  - Date: 2023-03
+  - Venue: CAV
+  - Code: -
+
+## API, Protocol & System Specifications
+
+OpenAPI/REST specifications, protocol models, kernel and library specifications mined from code or documentation.
+
+- [Agent4Spec: An LLM-based Agentic System to Optimize API Specifications through Automated Validation and Market Analysis](https://arxiv.org/abs/2610.13273)
+  - Author(s): Yongjian Tang, Costel Moraru, Doruk Tuncel, Hanya Elhashemy, Steffen Klepke, Thomas Runkler
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [Specification-Guided Synthesis of Deadlock-Free Communication Protocol Refinements with Large Language Models](https://arxiv.org/abs/2607.27964)
+  - Author(s): Yang Li, Ping Hou, Nobuko Yoshida
+  - Date: 2026-07
+  - Venue: ASE
+  - Code: -
+- [Reversa: A Reverse Documentation Engineering Framework for Converting Legacy Software into Operational Specifications for AI Agents](https://arxiv.org/abs/2605.18684)
+  - Author(s): Sanderson Oliveira de Macedo, Ronaldo Martins da Costa
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [BODHI: Precise OS Kernel Specification Inference](https://arxiv.org/abs/2605.23931)
+  - Author(s): Zhiming Chang, Ziyang Li
+  - Date: 2026-04
+  - Venue: -
+  - Code: -
+- [DAInfer+: Neurosymbolic Inference of API Specifications from Documentation via Embedding Models](https://arxiv.org/abs/2603.28060)
+  - Author(s): Maryam Masoudian, Anshunkang Zhou, Chengpeng Wang, Charles Zhang
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [When Specifications Meet Reality: Uncovering API Inconsistencies in Ethereum Infrastructure](https://arxiv.org/abs/2603.06029)
+  - Author(s): Jie Ma, Ningyu He, Jinwen Xi, Mingzhe Xing, Liangxin Liu, Jiushenzi Luo, Xiaopeng Fu, Chiachih Wu, Haoyu Wang, Ying Gao, Yinliang Yue
+  - Date: 2026-03
+  - Venue: PACMPL
+  - Code: -
+- [OOPS: Automated generation of REST API specification via LLMs](https://arxiv.org/abs/2601.12735)
+  - Author(s): Hao Chen, Yunchun Li, Chen Chen, Fengxu Lin, Wei Li
+  - Date: 2026-01
+  - Venue: JSS
+  - Code: -
+- [From Specification to Service: Accelerating API-First Development Using Multi-Agent Systems](https://arxiv.org/abs/2510.19274)
+  - Author(s): Saurabh Chauhan, Zeeshan Rasheed, Malik Abdul Sami, Kai-Kristian Kemell, Muhammad Waseem, Zheying Zhang, Jussi Rasku, Mika Saari, Pekka Abrahamsson
+  - Date: 2025-10
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/sirbh/code-gen)
+- [Automated Program Repair Based on REST API Specifications Using Large Language Models](https://arxiv.org/abs/2510.25148)
+  - Author(s): Katsuki Yamagishi, Norihiro Yoshida, Erina Makihara, Katsuro Inoue
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [OASBuilder: Generating OpenAPI Specifications from Online API Documentation with Large Language Models](https://arxiv.org/abs/2507.05316)
+  - Author(s): Koren Lazar, Matan Vetzler, Kiran Kate, Jason Tsay, David Boaz Himanshu Gupta, Avraham Shinnar, Rohith D Vallam, David Amid Esther Goldbraich, Guy Uziel, Jim Laredo, Ateret Anaby Tavor
+  - Date: 2025-07
+  - Venue: -
+  - Code: -
+- [LRASGen: LLM-based RESTful API Specification Generation](https://arxiv.org/abs/2504.16833)
+  - Author(s): Sida Deng, Rubing Huang, Man Zhang, Chenhui Cui, Dave Towey, Rongcun Wang
+  - Date: 2025-04
+  - Venue: TOSEM
+  - Code: -
+- [SpeCrawler: Generating OpenAPI Specifications from API Documentation Using Large Language Models](https://arxiv.org/abs/2402.11625)
+  - Author(s): Koren Lazar, Matan Vetzler, Guy Uziel, David Boaz, Esther Goldbraich, David Amid, Ateret Anaby-Tavor
+  - Date: 2024-02
+  - Venue: -
+  - Code: -
+- [Utilizing Large Language Models to Translate RFC Protocol Specifications to CPSA Definitions](https://arxiv.org/abs/2402.00890)
+  - Author(s): Martin Duclos, Ivan A. Fernandez, Kaneesha Moore, Sudip Mittal, Edward Zieglar
+  - Date: 2024-01
+  - Venue: -
+  - Code: -
+
+## Benchmarks, Datasets & Empirical Studies
+
+Benchmarks and empirical evaluations of specification generation, verification, and oracle inference.
+
+- [When Agent Evaluation Becomes Unreliable: An Empirical Study of Oracle Failures and Configuration-Dependent Measurement in an LLM Agent Benchmark](https://arxiv.org/abs/2610.16067)
+  - Author(s): Junjie Chen
+  - Date: 2026-10
+  - Venue: -
+  - Code: -
+- [How Powerful are LLMs in Generating Formal Program Specifications?](https://arxiv.org/abs/2608.13077)
+  - Author(s): Fanpeng Yang, Xing Li, Shuling Wang, Jie An, Zeyu Sun, Shenghua Feng, Wenhan Wang, Weiyi Wang, Naijun Zhan, Fanjiang Xu
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [Vul4Py: Benchmarking Automated Vulnerability Repair in Python with Paired Exploit and Functional Oracles](https://arxiv.org/abs/2608.00692)
+  - Author(s): Tan Bui, Ting Zhang, Ferdian Thung, Yunpeng Xiong, Penghao Jiang, Xin Zhou, David Lo
+  - Date: 2026-08
+  - Venue: -
+  - Code: -
+- [TLA+-Bench: An Execution-Grounded Benchmark and Dataset for Natural-Language to TLA Specification Generation](https://arxiv.org/abs/2607.23425)
+  - Author(s): Arslan Bisharat, Eric Spencer, Brian Ortiz, Khushboo Bhadauria, Mujtaba Nazari, Beatriz Santos, Anisa Ramos, TaiNing Wang, George K. Thiruvathukal, Konstantin Läufer, Mohammed Abuhamad
+  - Date: 2026-07
+  - Venue: -
+  - Code: -
+- [Executable JavaScript as a Checkable Specification Language: A JS-SAM Case Study on SysMoBench](https://arxiv.org/abs/2607.13092)
+  - Author(s): Jean-Jacques Dubray
+  - Date: 2026-07
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/jdubray/SysMoBench-1)
+- [An Empirical Study of LLM-Generated Specifications for VeriFast](https://arxiv.org/abs/2606.26490)
+  - Author(s): Wen Fan, Minh Tran, Sanya Dod, Xin Hu, Marilyn Rego, Danning Xie, Jenna DiVincenzo, Lin Tan
+  - Date: 2026-06
+  - Venue: -
+  - Code: -
+- [HierSVA: A Data Synthesis Pipeline, Dataset, and Benchmark for LLM-Driven Hierarchical Hardware Formal Verification](https://arxiv.org/abs/2606.13706)
+  - Author(s): Maohua Nie, Jiang Zhu, Jingqun Zhang, Zhichen Zeng, Jiayi Wang, Sibo Zhang, Jialin Wang, C. -J. Richard Shi
+  - Date: 2026-06
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/HierSVAAnon/HierSVACodeAndArtifacts)
+- [VeriContest: A Competitive-Programming Benchmark for Verifiable Code Generation](https://arxiv.org/abs/2605.08553)
+  - Author(s): Zichen Xie, Mrigank Pawagi, Yuxin Liu, Aaditi Rai, Lize Shao, John Berberian, Sicong Che, Wenxi Wang
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [LiveFMBench: Unveiling the Power and Limits of Agentic Workflows in Specification Generation](https://arxiv.org/abs/2605.01394)
+  - Author(s): Dong Xu, Jialun Cao, Guozhao Mo, Junjie Hu, Cheng Wen, Hongyu Lin, Xianpei Han, Shengchao Qin, Cong Tian, Shing-Chi Cheung, Le Sun, Yaojie Lu
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [POSTCONDBENCH: Benchmarking Correctness and Completeness in Formal Postcondition Inference](https://arxiv.org/abs/2605.03356)
+  - Author(s): Gehao Zhang, Juan Zhai
+  - Date: 2026-05
+  - Venue: ACL
+  - Code: -
+- [AssertLLM2: A Comprehensive LLM Benchmark for Assertion Generation from Design Specifications](https://arxiv.org/abs/2605.27472)
+  - Author(s): Yuchao Wu, Wenji Fang, Jing Wang, Wenkai Li, Ziyan Guo, Zhiyao Xie
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [Specification-Driven Development Benchmark: Security Knowledge Transition](https://arxiv.org/abs/2606.00167)
+  - Author(s): Oleg Grynets, Andrii Salyk, Vasyl Lyashkevych, Oleh Kaskun, Danyil Zhuravchak
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [SmartEval: A Benchmark for Evaluating LLM-Generated Smart Contracts from Natural Language Specifications](https://arxiv.org/abs/2605.09610)
+  - Author(s): Abhinav Goel, Agostino Capponi, Alfio Gliozzo, Chaitya Shah
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [CodeSpecBench: Benchmarking LLMs for Executable Behavioral Specification Generation](https://arxiv.org/abs/2604.12268)
+  - Author(s): Zaoyu Chen, Jianbo Dai, Boyu Zhu, Jingdong Wang, Huiming Wang, Xin Xu, Haoyang Yuan, Zhijiang Guo, Xiao-Ming Wu
+  - Date: 2026-04
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/SparksofAGI/CodeSpecBench)
+- [Can LLMs Reason Like Automated Theorem Provers for Rust Verification? VCoT-Bench: Evaluating via Verification Chain of Thought](https://arxiv.org/abs/2603.18334)
+  - Author(s): Zichen Xie, Wenxi Wang
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [Talk is Cheap, Logic is Hard: Benchmarking LLMs on Post-Condition Formalization](https://arxiv.org/abs/2603.17193)
+  - Author(s): I. S. W. B. Prasetya, Fitsum Kifetew, Davide Prandi
+  - Date: 2026-03
+  - Venue: -
+  - Code: -
+- [AlgoVeri: An Aligned Benchmark for Verified Code Generation on Classical Algorithms](https://arxiv.org/abs/2602.09464)
+  - Author(s): Haoyu Zhao, Ziran Yang, Jiawei Li, Deyuan He, Zenan Li, Chi Jin, Venugopal V. Veeravalli, Aarti Gupta, Sanjeev Arora
+  - Date: 2026-02
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/haoyuzhao123/algoveri)
+- [VeriSoftBench: Repository-Scale Formal Verification Benchmarks for Lean](https://arxiv.org/abs/2602.18307)
+  - Author(s): Yutong Xin, Qiaochu Chen, Greg Durrett, Işil Dillig
+  - Date: 2026-02
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/utopia-group/VeriSoftBench)
+- [Neural Theorem Proving for Verification Conditions: A Real-World Benchmark](https://arxiv.org/abs/2601.18944)
+  - Author(s): Qiyuan Xu, Xiaokun Luan, Renxi Wang, Joshua Ong Jun Leang, Peixin Wang, Haonan Li, Wenda Li, Conrad Watt
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [Understanding Specification-Driven Code Generation with LLMs: An Empirical Study Design](https://arxiv.org/abs/2601.03878)
+  - Author(s): Giovanni Rosa, David Moreno-Lumbreras, Gregorio Robles, Jesús M. González-Barahona
+  - Date: 2026-01
+  - Venue: -
+  - Code: -
+- [DualGauge: Automated Joint Security-Functionality Benchmarking of Specification-Only Code Generation by LLMs and Coding Agents](https://arxiv.org/abs/2511.20709)
+  - Author(s): Rupam Patir, Keyan Guo, Suvadra Barua, Abhijeet Pathak, Dinesh Gudimetla, Jiawei Guo, Hongxin Hu, Haipeng Cai
+  - Date: 2025-11
+  - Venue: -
+  - Code: -
+- [VeriEquivBench: An Equivalence Score for Ground-Truth-Free Evaluation of Formally Verifiable Code](https://arxiv.org/abs/2510.06296)
+  - Author(s): Lingfei Zeng, Fengdi Che, Xuhan Huang, Fei Ye, Xu Xu, Binhang Yuan, Jie Fu
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [Local Success Does Not Compose: Benchmarking Large Language Models for Compositional Formal Verification](https://arxiv.org/abs/2509.23061)
+  - Author(s): Xu Xu, Xin Li, Xingwei Qu, Jie Fu, Binhang Yuan
+  - Date: 2025-09
+  - Venue: -
+  - Code: -
+- [A benchmark for vericoding: formally verified program synthesis](https://arxiv.org/abs/2509.22908)
+  - Author(s): Sergiu Bursuc, Theodore Ehrenborg, Shaowei Lin, Lacramioara Astefanoaei, Ionel Emilian Chiosa, Jure Kukovec, Alok Singh, Oliver Butterley, Adem Bizid, Quinn Dougherty, Miranda Zhao, Max Tan, Max Tegmark
+  - Date: 2025-09
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/Beneficial-AI-Foundation/vericoding-benchmark)
+- [VERINA: Benchmarking Verifiable Code Generation](https://arxiv.org/abs/2505.23135)
+  - Author(s): Zhe Ye, Zhengxu Yan, Jingxuan He, Timothe Kasriel, Kaiyu Yang, Dawn Song
+  - Date: 2025-05
+  - Venue: -
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/sunblaze-ucb/verina)
+- [VerifyThisBench: Generating Code, Specifications, and Proofs All at Once](https://arxiv.org/abs/2505.19271)
+  - Author(s): Xun Deng, Sicheng Zhong, Barış Bayazıt, Andreas Veneris, Fan Long, Xujie Si
+  - Date: 2025-05
+  - Venue: -
+  - Code: -
+- [CLEVER: A Curated Benchmark for Formally Verified Code Generation](https://arxiv.org/abs/2505.13938)
+  - Author(s): Amitayush Thakur, Jasper Lee, George Tsoukalas, Meghana Sistla, Matthew Zhao, Stefan Zetzsche, Greg Durrett, Yisong Yue, Swarat Chaudhuri
+  - Date: 2025-05
+  - Venue: NeurIPS
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/trishullab/clever)
+- [OSVBench: Benchmarking LLMs on Specification Generation Tasks for Operating System Verification](https://arxiv.org/abs/2504.20964)
+  - Author(s): Shangyu Li, Juyong Jiang, Tiancheng Zhao, Jiasi Shen
+  - Date: 2025-04
+  - Venue: AAAI
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/lishangyu-hkust/OSVBench)
+- [FormalSpecCpp: A Dataset of C++ Formal Specifications created using LLMs](https://arxiv.org/abs/2502.15217)
+  - Author(s): Madhurima Chakraborty, Peter Pirkelbauer, Qing Yi
+  - Date: 2025-02
+  - Venue: MSR
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/MadhuNimmo/FormalSpecCpp)
+- [AssertionBench: A Benchmark to Evaluate Large-Language Models for Assertion Generation](https://arxiv.org/abs/2406.18627)
+  - Author(s): Vaishnavi Pulavarthi, Deeksha Nandal, Soham Dan, Debjit Pal
+  - Date: 2024-06
+  - Venue: ACL
+  - Code: -
+- [DafnyBench: A Benchmark for Formal Software Verification](https://arxiv.org/abs/2406.08467)
+  - Author(s): Chloe Loughridge, Qinyi Sun, Seth Ahrenbach, Federico Cassano, Chuyue Sun, Ying Sheng, Anish Mudide, Md Rakib Hossain Misu, Nada Amin, Max Tegmark
+  - Date: 2024-06
+  - Venue: TMLR
+  - Code: [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/sun-wendy/DafnyBench)
+- [An Empirical Evaluation of Pre-trained Large Language Models for Repairing Declarative Formal Specifications](https://arxiv.org/abs/2404.11050)
+  - Author(s): Mohannad Alhanahnah, Md Rashedul Hasan, Lisong Xu, Hamid Bagheri
+  - Date: 2024-04
+  - Venue: EMSE
+  - Code: -
+- [LLM-Based Test-Driven Interactive Code Generation: User Study and Empirical Evaluation](https://arxiv.org/abs/2404.10100)
+  - Author(s): Sarah Fakhoury, Aaditya Naik, Georgios Sakkas, Saikat Chakraborty, Shuvendu K. Lahiri
+  - Date: 2024-04
+  - Venue: TSE
+  - Code: -
+- [Enhancing Formal Theorem Proving: A Comprehensive Dataset for Training AI Models on Coq Code](https://arxiv.org/abs/2403.12627)
+  - Author(s): Andreas Florath
+  - Date: 2024-03
+  - Venue: -
+  - Code: -
+- [Towards General Loop Invariant Generation: A Benchmark of Programs with Memory Manipulation](https://arxiv.org/abs/2311.10483)
+  - Author(s): Chang Liu, Xiwei Wu, Yuan Feng, Qinxiang Cao, Junchi Yan
+  - Date: 2023-11
+  - Venue: NeurIPS
+  - Code: -
+- [The FormAI Dataset: Generative AI in Software Security Through the Lens of Formal Verification](https://arxiv.org/abs/2307.02192)
+  - Author(s): Norbert Tihanyi, Tamas Bisztray, Ridhi Jain, Mohamed Amine Ferrag, Lucas C. Cordeiro, Vasileios Mavroeidis
+  - Date: 2023-07
+  - Venue: -
+  - Code: -
+- [How Effective are Large Language Models in Generating Software Specifications?](https://arxiv.org/abs/2306.03324)
+  - Author(s): Danning Xie, Byungwoo Yoo, Nan Jiang, Mijung Kim, Lin Tan, Xiangyu Zhang, Judy S. Lee
+  - Date: 2023-06
+  - Venue: SANER
+  - Code: -
+
+## Surveys & Position Papers
+
+- [LLM-Based Test Oracles: Source-of-Authority Taxonomy -- A Systematic Literature Review](https://arxiv.org/abs/2607.05031)
+  - Author(s): Ali Hassaan Mughal, Muhammad Bilal
+  - Date: 2026-07
+  - Venue: IEEE Access
+  - Code: -
+- [Position: Natural Language Should Not Fully Replace Formal Languages](https://arxiv.org/abs/2607.20432)
+  - Author(s): Eitan Wagner, Elisha Rosensweig, Omri Abend
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [ESBMC: A Survey of Its Evolution, Integration, and Future Directions in Formal Software Verification](https://arxiv.org/abs/2605.26169)
+  - Author(s): Pierre Dantas, Lucas Cordeiro, Waldir Junior
+  - Date: 2026-05
+  - Venue: -
+  - Code: -
+- [LLM For Loop Invariant Generation and Fixing: How Far Are We?](https://arxiv.org/abs/2511.06552)
+  - Author(s): Mostafijur Rahman Akhond, Saikat Chakraborty, Gias Uddin
+  - Date: 2025-11
+  - Venue: -
+  - Code: -
+- [Position: Vibe Coding Needs Vibe Reasoning: Improving Vibe Coding with Formal Verification](https://arxiv.org/abs/2511.00202)
+  - Author(s): Jacqueline Mitchell, Yasser Shaaban
+  - Date: 2025-10
+  - Venue: -
+  - Code: -
+- [A Short Survey on Formalising Software Requirements using Large Language Models](https://arxiv.org/abs/2506.11874)
+  - Author(s): Arshad Beg, Diarmuid O'Donoghue, Rosemary Monahan
+  - Date: 2025-06
+  - Venue: -
+  - Code: -
+- [The Fusion of Large Language Models and Formal Methods for Trustworthy AI Agents: A Roadmap](https://arxiv.org/abs/2412.06512)
+  - Author(s): Yedi Zhang, Yufan Cai, Xinyue Zuo, Xiaokun Luan, Kailong Wang, Zhe Hou, Yifan Zhang, Zhiyuan Wei, Meng Sun, Jun Sun, Jing Sun, Jin Song Dong
+  - Date: 2024-12
+  - Venue: -
+  - Code: -
+
+## Tools and Frameworks
+
+Specification languages, verifiers, and infrastructure that the papers above build on or evaluate against.
+
+- [Dafny](https://github.com/dafny-lang/dafny) - Verification-aware programming language with first-class pre/postconditions and invariants.
+- [Verus](https://github.com/verus-lang/verus) - Tool for verifying the correctness of Rust code using SMT-based proofs.
+- [F*](https://github.com/FStarLang/FStar) - Proof-oriented programming language with dependent types and SMT automation.
+- [Frama-C](https://git.frama-c.com/pub/frama-c) - Static analysis platform for C with the ACSL behavioral specification language.
+- [OpenJML](https://github.com/OpenJML/OpenJML) - Deductive verification and runtime checking for Java using JML specifications.
+- [VeriFast](https://github.com/verifast/verifast) - Separation-logic verifier for single- and multithreaded C and Java programs.
+- [Kani](https://github.com/model-checking/kani) - Bit-precise model checker for Rust, used to check user-written properties.
+- [CBMC](https://github.com/diffblue/cbmc) - Bounded model checker for C and C++ programs.
+- [ESBMC](https://github.com/esbmc/esbmc) - Context-bounded model checker with LLM-assisted front ends.
+- [Daikon](https://github.com/codespecs/daikon) - Classical dynamic detector of likely program invariants; a common baseline for LLM inference.
+- [Alloy](https://github.com/AlloyTools/org.alloytools.alloy) - Declarative specification language and analyzer for software structures.
+- [TLA+ / TLAPS](https://github.com/tlaplus/tlaplus) - Specification language and tools for concurrent and distributed systems.
+- [Lean 4](https://github.com/leanprover/lean4) - Proof assistant and programming language used for verified software and proof automation.
+- [Rocq (Coq)](https://github.com/rocq-prover/rocq) - Interactive theorem prover underlying much LLM proof-synthesis research.
+- [Hypothesis](https://github.com/HypothesisWorks/hypothesis) - Property-based testing library for Python; a common target for LLM-generated properties.
+- [nl2spec](https://github.com/realChrisHahn2/nl2spec) - Interactive translation of unstructured natural language into temporal logic.
+- [loop-invariant-gen-experiments (Loopy)](https://github.com/microsoft/loop-invariant-gen-experiments) - LLM-driven loop invariant generation with symbolic checking and repair.
+- [NeuralInvariantRanker](https://github.com/microsoft/NeuralInvariantRanker) - Ranker for LLM-generated loop invariants to reduce verifier calls.
+- [Clover](https://github.com/ChuyueSun/Clover) - Closed-loop verifiable code generation with consistency checks between code, docstring, and annotations.
+- [dafny-annotator](https://github.com/metareflection/dafny-annotator) - LLM + search tool that adds verification annotations to Dafny programs.
+- [DafnyBench](https://github.com/sun-wendy/DafnyBench) - Benchmark of Dafny programs for evaluating automated verification.
+
+## Contributing
+
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+In short:
+
+- One paper per bullet, placed in the most specific matching section.
+- Keep entries in reverse-chronological order (newest first) within a section.
+- Use the arXiv abstract page as the primary link when one exists.
+- Include `Author(s)`, `Date` (`YYYY-MM`, first preprint or publication), `Venue` (or `-`), and `Code` (or `-`).
+- `scripts/fetch_entry.py <arxiv-id-or-url>` generates a correctly formatted entry for you.
+
+## License
+
+[CC0 1.0 Universal](LICENSE) — to the extent possible under law, the contributors have waived all copyright and related rights to this work.

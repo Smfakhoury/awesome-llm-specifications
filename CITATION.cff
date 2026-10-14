@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this list in your research, please cite it as below."
+title: "Awesome LLM Specifications"
+abstract: >-
+  A curated collection of papers, benchmarks, and tools on inferring,
+  generating, and using specifications for software with large language
+  models, covering postconditions, contracts, loop invariants, test
+  oracles, temporal-logic properties, and the verification pipelines
+  built on top of them.
+type: dataset
+authors:
+  - family-names: Fakhoury
+    given-names: Sarah
+    alias: Smfakhoury
+repository-code: "https://github.com/Smfakhoury/awesome-llm-specifications"
+url: "https://github.com/Smfakhoury/awesome-llm-specifications"
+keywords:
+  - large language models
+  - specification inference
+  - formal specifications
+  - program verification
+  - test oracles
+  - loop invariants
+  - software engineering
+license: CC0-1.0
