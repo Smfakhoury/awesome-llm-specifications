@@ -9,8 +9,6 @@
 
 A curated collection of papers, blog posts, benchmarks, and tools on **inferring, generating, and using specifications for software with large language models** — postconditions, contracts, loop invariants, test oracles, temporal-logic properties, and the verification pipelines built on top of them.
 
-**335 papers** · **11 blog posts and talks** · **56 tools** · organised by what a specification is *for*, not by which model wrote it.
-
 > **Scope:** specifications *for software*. Purely mathematical autoformalization, hardware/RTL assertion generation, and fuzzing without a specification component are out of scope. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full rules.
 
 > **Entry format:** each paper lists its authors, the date of the first preprint, the publication venue (or `-` if it is still a preprint), and a code badge when the authors released an implementation. Paper sections are newest-first.
@@ -40,8 +38,6 @@ A curated collection of papers, blog posts, benchmarks, and tools on **inferring
 - [📄 License](#-license)
 
 ## 🧭 Start Here
-
-*New to the area? Begin with the surveys, then the blog posts and talks for context.*
 
 ### Surveys & Position Papers
 
@@ -95,8 +91,6 @@ Overviews of the field and arguments about where specifications fit in an LLM wo
 
 ### Blog Posts, Talks & Essays
 
-A short, hand-picked reading list of non-archival writing, essential first.
-
 - [The New Code](https://ai.engineer/talks/8rABwKRsec4-specifications-are-the-new-code)
   - Author(s): Sean Grove, OpenAI (AI Engineer World's Fair)
   - Date: 2025-06
@@ -146,7 +140,7 @@ A short, hand-picked reading list of non-archival writing, essential first.
 
 ## 🔍 Where Specifications Come From
 
-*Recovering or synthesising specifications — from code, from tests, from documentation, or from a human describing what they want.*
+*Recovering or synthesising specifications from code, from tests, from documentation, or from a human describing what they want.*
 
 ### Specification Inference & Generation
 
@@ -1633,8 +1627,6 @@ Test oracles, assertions, property-based tests, and metamorphic relations as exe
 
 ## 📊 Measuring Progress
 
-*How well does any of this actually work?*
-
 ### Benchmarks, Datasets & Empirical Studies
 
 Benchmarks and empirical evaluations of specification generation, verification, and oracle inference.
@@ -1834,7 +1826,6 @@ Benchmarks and empirical evaluations of specification generation, verification, 
 
 ## 🧰 Tools & Frameworks
 
-*What to actually run.*
 
 ### LLM-Based Tools
 
@@ -1914,20 +1905,3 @@ The classical infrastructure that the work above targets, extends, or is evaluat
 - [proptest](https://github.com/proptest-rs/proptest) - Property-based testing for Rust, inspired by Hypothesis.
 
 <p align="right"><a href="#-contents">back to top &#8679;</a></p>
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
-
-In short:
-
-- One paper per bullet, placed in the most specific matching section.
-- Keep entries in reverse-chronological order (newest first) within a section.
-- Use the arXiv abstract page as the primary link when one exists.
-- Include `Author(s)`, `Date` (`YYYY-MM`, first preprint or publication), `Venue` (or `-`), and `Code` (or `-`).
-- `scripts/fetch_entry.py <arxiv-id-or-url>` generates a correctly formatted entry for you.
-- Blog posts and talks go in [Blog Posts, Talks & Essays](#blog-posts-talks--essays) with a one-line description instead of a venue.
-
-## 📄 License
-
-[CC0 1.0 Universal](LICENSE) — to the extent possible under law, the contributors have waived all copyright and related rights to this work.
